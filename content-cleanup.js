@@ -38,3 +38,7 @@ if (Array.isArray(window.BOOK_CONTENT)) {
     text: removeNearbyDuplicateParagraphs(section.text)
   }));
 }
+
+try {
+  localStorage.removeItem("sffil-local-book-content");
+} catch (_) {}
