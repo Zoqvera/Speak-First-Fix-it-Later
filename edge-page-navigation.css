@@ -1,0 +1,27 @@
+.book-stage {
+  grid-template-columns: minmax(0, 1080px);
+  gap: 0;
+}
+
+.edge-navigation-enabled {
+  cursor: default;
+  touch-action: manipulation;
+}
+
+.edge-navigation-enabled::before,
+.edge-navigation-enabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(56px, 16%, 140px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.edge-navigation-enabled::before { left: 0; }
+.edge-navigation-enabled::after { right: 0; }
+
+@media (max-width: 820px) {
+  .book-stage { grid-template-columns: 1fr; }
+}
