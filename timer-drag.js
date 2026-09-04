@@ -6,6 +6,10 @@
   const EDGE_MARGIN = 8;
   const DRAG_THRESHOLD = 6;
 
+  timer.style.touchAction = "none";
+  timer.style.userSelect = "none";
+  timer.style.cursor = "grab";
+
   let dragging = false;
   let moved = false;
   let pointerId = null;
@@ -64,6 +68,7 @@
     startLeft = rect.left;
     startTop = rect.top;
 
+    timer.style.cursor = "grabbing";
     timer.classList.add("is-dragging");
     timer.setPointerCapture?.(pointerId);
   });
@@ -84,6 +89,7 @@
     if (!dragging || (event.pointerId !== undefined && event.pointerId !== pointerId)) return;
 
     dragging = false;
+    timer.style.cursor = "grab";
     timer.classList.remove("is-dragging");
 
     if (moved) {
