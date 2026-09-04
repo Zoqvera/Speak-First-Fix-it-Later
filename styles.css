@@ -29,10 +29,10 @@ input { font: inherit; }
   width: min(1320px, calc(100% - 28px));
   height: 100dvh;
   margin: 0 auto;
-  padding: 16px 0 18px;
+  padding: 16px 0 12px;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  gap: 12px;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  gap: 9px;
 }
 
 .site-header,
@@ -270,6 +270,26 @@ input { font: inherit; }
 .page-jump button:hover { filter: brightness(1.06); }
 .page-jump.is-invalid input { border-color: rgba(180,35,24,.7); box-shadow: 0 0 0 3px rgba(180,35,24,.08); }
 
+.digital-book-footer {
+  width: min(1080px, calc(100% - 132px));
+  min-height: 24px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(69,58,45,.12);
+}
+
+.learning-guides-link {
+  padding-top: 7px;
+  color: var(--accent);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-decoration: none;
+}
+.learning-guides-link:hover { text-decoration: underline; }
+
 .toc {
   position: fixed;
   z-index: 40;
@@ -295,8 +315,8 @@ input { font: inherit; }
   .reader-shell {
     width: calc(100% - 14px);
     height: 100dvh;
-    padding: 8px 0 10px;
-    gap: 7px;
+    padding: 8px 0 6px;
+    gap: 5px;
   }
   .site-header { min-height: 42px; padding-right: 82px; }
   .site-header h1 { font-size: 1.05rem; }
@@ -324,14 +344,18 @@ input { font: inherit; }
   .page-jump { margin-left: auto; }
   .page-jump label { display: none; }
   .page-jump input { width: 58px; }
+  .digital-book-footer { width: calc(100% - 118px); min-height: 20px; }
+  .learning-guides-link { padding-top: 5px; font-size: .6rem; }
   .timer--floating { top: 10px; right: 10px; }
 }
 
 @media (max-height: 620px) and (min-width: 821px) {
-  .reader-shell { padding-top: 8px; padding-bottom: 8px; gap: 7px; }
+  .reader-shell { padding-top: 8px; padding-bottom: 5px; gap: 5px; }
   .site-header { min-height: 38px; }
   .page { padding-top: 16px; padding-bottom: 12px; }
   .page-content { padding-top: 14px; padding-bottom: 10px; }
+  .digital-book-footer { min-height: 18px; }
+  .learning-guides-link { padding-top: 4px; font-size: .62rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
