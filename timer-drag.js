@@ -18,6 +18,7 @@
   let startY = 0;
   let startLeft = 0;
   let startTop = 0;
+  let lastMode = window.innerWidth <= MOBILE_BREAKPOINT ? "mobile" : "desktop";
 
   function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
@@ -55,30 +56,40 @@
     const pageRect = page.getBoundingClientRect();
     const timerRect = timer.getBoundingClientRect();
 
-    // Matches the mobile reference: timer sits inside the page,
-    // aligned to the upper-right area of the page topbar.
+    // Referência mobile: relógio dentro da página, no canto superior direito.
     const left = pageRect.right - timerRect.width - 28;
     const top = pageRect.top + 4;
     setPosition(left, top, false);
     return true;
   }
 
-  function restorePosition() {
-    // On mobile, always open in the reference position. The reader can still
-    // drag the timer freely afterwards during the current session.
-    if (window.innerWidth <= MOBILE_BREAKPOINT) {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => setMobileDefaultPosition());
-      });
-      return;
-    }
+  function setDesktopDefaultPosition() {
+    const page = document.getElementById("page");
+    if (!page) return false;
 
-    try {
-      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-      if (saved && Number.isFinite(saved.left) && Number.isFinite(saved.top)) {
-        setPosition(saved.left, saved.top, false);
-      }
-    } catch (_) {}
+    const pageRect = page.getBoundingClientRect();
+
+    // Referência desktop: relógio imediatamente à direita do livro,
+    // ligeiramente abaixo da borda superior da página.
+    const left = pageRect.right + 26;
+    const top = pageRect.top + 29;
+    setPosition(left, top, false);
+    return true;
+  }
+
+  function setDefaultPosition() {
+    if (window.innerWidth <= MOBILE_BREAKPOINT) {
+      return setMobileDefaultPosition();
+    }
+    return setDesktopDefaultPosition();
+  }
+
+  function applyInitialPosition() {
+    // Em cada abertura, usa a posição de referência correspondente ao dispositivo.
+    // Depois disso, o usuário continua podendo arrastar o relógio livremente.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => setDefaultPosition());
+    });
   }
 
   timer.addEventListener("pointerdown", event => {
@@ -133,7 +144,7 @@
   timer.addEventListener("pointerup", finishDrag);
   timer.addEventListener("pointercancel", finishDrag);
 
-  // Prevent the timer click action from firing after a drag gesture.
+  // Evita acionar o cronômetro ao terminar um gesto de arraste.
   timer.addEventListener("click", event => {
     if (!moved) return;
     event.preventDefault();
@@ -142,14 +153,19 @@
   }, true);
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth <= MOBILE_BREAKPOINT) {
-      setMobileDefaultPosition();
+    const mode = window.innerWidth <= MOBILE_BREAKPOINT ? "mobile" : "desktop";
+
+    // Ao trocar entre layouts, reposiciona conforme a referência do novo modo.
+    if (mode !== lastMode) {
+      lastMode = mode;
+      requestAnimationFrame(() => setDefaultPosition());
       return;
     }
 
+    // Em redimensionamentos dentro do mesmo modo, preserva a posição escolhida.
     const rect = timer.getBoundingClientRect();
     setPosition(rect.left, rect.top, false);
   });
 
-  restorePosition();
+  applyInitialPosition();
 })();
