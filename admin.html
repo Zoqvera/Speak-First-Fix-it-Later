@@ -15,7 +15,7 @@
     <div>
       <p class="eyebrow">Painel administrativo</p>
       <h1>Speak First. Fix It Later.</h1>
-      <p class="subtle">Edite capítulos e publique diretamente no GitHub Pages.</p>
+      <p class="subtle">Edite o conteúdo do livro diretamente neste navegador.</p>
     </div>
     <a class="secondary-button" href="./" target="_blank" rel="noopener">Abrir livro</a>
   </header>
@@ -59,24 +59,23 @@
 
         <div class="editor-meta">
           <span id="wordCount">0 palavras</span>
-          <span id="pageEstimate">0 páginas estimadas</span>
+          <span id="pageEstimate">Paginação adaptativa</span>
         </div>
 
         <div class="editor-actions">
           <button id="deleteSection" class="danger-button" type="button">Excluir seção</button>
-          <button id="saveLocal" class="secondary-button" type="button">Salvar rascunho local</button>
+          <button id="saveLocal" class="secondary-button" type="button">Salvar rascunho</button>
         </div>
       </form>
     </section>
   </main>
 
-  <section class="publish-bar" aria-label="Publicação">
+  <section class="publish-bar" aria-label="Aplicar alterações">
     <div class="publish-copy">
-      <strong>Publicar alterações</strong>
-      <span>O token é usado somente nesta sessão e não é salvo no site.</span>
+      <strong>Aplicar alterações ao livro</strong>
+      <span>Sem token. As alterações ficam salvas neste navegador e aparecem imediatamente no leitor.</span>
     </div>
-    <input id="githubToken" type="password" placeholder="GitHub personal access token" autocomplete="off" aria-label="GitHub personal access token" />
-    <button id="publishButton" class="primary-button" type="button">Publicar no site</button>
+    <button id="publishButton" class="primary-button" type="button">Aplicar alterações</button>
     <span id="publishStatus" class="publish-status" role="status" aria-live="polite"></span>
   </section>
 
