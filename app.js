@@ -35,45 +35,58 @@ function countWords(text) {
   return text.trim() ? text.trim().split(/\s+/).length : 0;
 }
 
-function chunkParagraphs(section) {
-  const rawParagraphs = section.text
+function sectionToWordStream(section) {
+  const paragraphs = section.text
     .split(/\n\s*\n/)
-    .map(p => p.trim())
+    .map(paragraph => paragraph.trim())
     .filter(Boolean);
 
+  const stream = [];
+
+  paragraphs.forEach((paragraph, index) => {
+    paragraph.split(/\s+/).forEach(word => stream.push({ type: "word", value: word }));
+    if (index < paragraphs.length - 1) stream.push({ type: "paragraph-break" });
+  });
+
+  return stream;
+}
+
+function chunkSection(section) {
+  const stream = sectionToWordStream(section);
   const sectionPages = [];
-  let currentParagraphs = [];
-  let currentWords = 0;
+  let currentTokens = [];
+  let currentWordCount = 0;
 
-  rawParagraphs.forEach(paragraph => {
-    const words = paragraph.split(/\s+/);
+  const flushPage = () => {
+    if (!currentTokens.length) return;
 
-    if (words.length > WORDS_PER_PAGE) {
-      if (currentParagraphs.length) {
-        sectionPages.push(currentParagraphs.join("\n\n"));
-        currentParagraphs = [];
-        currentWords = 0;
+    let text = "";
+    currentTokens.forEach(token => {
+      if (token.type === "paragraph-break") {
+        text = text.trimEnd() + "\n\n";
+      } else {
+        text += `${token.value} `;
       }
+    });
 
-      for (let i = 0; i < words.length; i += WORDS_PER_PAGE) {
-        sectionPages.push(words.slice(i, i + WORDS_PER_PAGE).join(" "));
-      }
+    sectionPages.push(text.trim());
+    currentTokens = [];
+    currentWordCount = 0;
+  };
+
+  stream.forEach(token => {
+    if (token.type === "paragraph-break") {
+      currentTokens.push(token);
       return;
     }
 
-    if (currentWords + words.length > WORDS_PER_PAGE && currentParagraphs.length) {
-      sectionPages.push(currentParagraphs.join("\n\n"));
-      currentParagraphs = [paragraph];
-      currentWords = words.length;
-    } else {
-      currentParagraphs.push(paragraph);
-      currentWords += words.length;
-    }
+    currentTokens.push(token);
+    currentWordCount += 1;
+
+    if (currentWordCount === WORDS_PER_PAGE) flushPage();
   });
 
-  if (currentParagraphs.length) {
-    sectionPages.push(currentParagraphs.join("\n\n"));
-  }
+  flushPage();
 
   return sectionPages.map((text, sectionPageIndex) => ({
     sectionId: section.id,
@@ -86,7 +99,7 @@ function chunkParagraphs(section) {
 }
 
 function buildPages() {
-  pages = window.BOOK_CONTENT.flatMap(chunkParagraphs);
+  pages = window.BOOK_CONTENT.flatMap(chunkSection);
   if (!pages.length) {
     pages = [{ sectionId: "empty", sectionTitle: "Livro", sectionLabel: "", sectionPageIndex: 0, text: "Conteúdo em preparação.", wordCount: 3 }];
   }
