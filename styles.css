@@ -276,7 +276,8 @@ input { font: inherit; }
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 18px;
   border-top: 1px solid rgba(69,58,45,.12);
 }
 
@@ -289,6 +290,19 @@ input { font: inherit; }
   text-decoration: none;
 }
 .learning-guides-link:hover { text-decoration: underline; }
+
+.footer-credit {
+  padding-top: 7px;
+  color: var(--muted);
+  font-size: .64rem;
+  white-space: nowrap;
+}
+.footer-credit a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer-credit a:hover { text-decoration: underline; }
 
 .toc {
   position: fixed;
@@ -344,8 +358,9 @@ input { font: inherit; }
   .page-jump { margin-left: auto; }
   .page-jump label { display: none; }
   .page-jump input { width: 58px; }
-  .digital-book-footer { width: calc(100% - 118px); min-height: 20px; }
+  .digital-book-footer { width: calc(100% - 118px); min-height: 20px; gap: 10px; }
   .learning-guides-link { padding-top: 5px; font-size: .6rem; }
+  .footer-credit { padding-top: 5px; font-size: .57rem; }
   .timer--floating { top: 10px; right: 10px; }
 }
 
@@ -355,7 +370,8 @@ input { font: inherit; }
   .page { padding-top: 16px; padding-bottom: 12px; }
   .page-content { padding-top: 14px; padding-bottom: 10px; }
   .digital-book-footer { min-height: 18px; }
-  .learning-guides-link { padding-top: 4px; font-size: .62rem; }
+  .learning-guides-link,
+  .footer-credit { padding-top: 4px; font-size: .62rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
