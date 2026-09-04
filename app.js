@@ -86,8 +86,10 @@ function renderParagraphs(text) {
 }
 
 function pageHtml(section, text, sectionPageIndex) {
+  const title = section.title ?? section.sectionTitle ?? "";
+  const label = section.label ?? section.sectionLabel ?? "";
   const heading = sectionPageIndex === 0
-    ? `<p class="chapter-kicker">${escapeHtml(section.title)}</p><h2>${escapeHtml(section.label)}</h2>`
+    ? `${title ? `<p class="chapter-kicker">${escapeHtml(title)}</p>` : ""}${label ? `<h2>${escapeHtml(label)}</h2>` : ""}`
     : "";
   return `${heading}${renderParagraphs(text)}`;
 }
@@ -309,7 +311,7 @@ function renderTimer() {
   timerEl.classList.toggle("is-running", timerState.running);
 
   if (seconds === 0) {
-    timerEl.setAttribute("aria-label", "Tempo encerrado. Clique para reiniciar o cronômetro de 5 minutos");
+    timerEl.setAttribute("aria-label", "Tempo encerrado. Clique para reiniciar ou reiniciar o cronômetro de 5 minutos");
     timerEl.title = "Clique para reiniciar";
   } else if (timerState.running) {
     timerEl.setAttribute("aria-label", `${minutes} minutos e ${secs} segundos restantes`);
