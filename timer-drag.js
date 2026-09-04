@@ -5,6 +5,7 @@
   const STORAGE_KEY = "sffil-timer-position";
   const EDGE_MARGIN = 8;
   const DRAG_THRESHOLD = 6;
+  const MOBILE_BREAKPOINT = 820;
 
   timer.style.touchAction = "none";
   timer.style.userSelect = "none";
@@ -47,7 +48,31 @@
     }
   }
 
+  function setMobileDefaultPosition() {
+    const page = document.getElementById("page");
+    if (!page) return false;
+
+    const pageRect = page.getBoundingClientRect();
+    const timerRect = timer.getBoundingClientRect();
+
+    // Matches the mobile reference: timer sits inside the page,
+    // aligned to the upper-right area of the page topbar.
+    const left = pageRect.right - timerRect.width - 28;
+    const top = pageRect.top + 4;
+    setPosition(left, top, false);
+    return true;
+  }
+
   function restorePosition() {
+    // On mobile, always open in the reference position. The reader can still
+    // drag the timer freely afterwards during the current session.
+    if (window.innerWidth <= MOBILE_BREAKPOINT) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => setMobileDefaultPosition());
+      });
+      return;
+    }
+
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
       if (saved && Number.isFinite(saved.left) && Number.isFinite(saved.top)) {
@@ -117,6 +142,11 @@
   }, true);
 
   window.addEventListener("resize", () => {
+    if (window.innerWidth <= MOBILE_BREAKPOINT) {
+      setMobileDefaultPosition();
+      return;
+    }
+
     const rect = timer.getBoundingClientRect();
     setPosition(rect.left, rect.top, false);
   });
