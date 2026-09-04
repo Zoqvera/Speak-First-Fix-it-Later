@@ -3,43 +3,43 @@ window.BOOK_CONTENT = Array.isArray(window.BOOK_CONTENT) ? window.BOOK_CONTENT :
 const BOOK_PART_DIVIDERS = [
   {
     id: "parte-1",
-    title: "PARTE I — ANTES DO INGLÊS, EXISTE O APRENDIZ",
-    label: "",
+    title: "PARTE I",
+    label: "ANTES DO INGLÊS, EXISTE O APRENDIZ",
     text: "\u200B",
     insertAfter: "introducao"
   },
   {
     id: "parte-2",
-    title: "PARTE II — PERMITA-SE SER RUIM",
-    label: "",
+    title: "PARTE II",
+    label: "PERMITA-SE SER RUIM",
     text: "\u200B",
     insertAfter: "capitulo-4"
   },
   {
     id: "parte-3",
-    title: "PARTE III — CONSTRUINDO O PRÉDIO",
-    label: "",
+    title: "PARTE III",
+    label: "CONSTRUINDO O PRÉDIO",
     text: "\u200B",
     insertAfter: "capitulo-8"
   },
   {
     id: "parte-4",
-    title: "PARTE IV — O CÉREBRO QUE APRENDE",
-    label: "",
+    title: "PARTE IV",
+    label: "O CÉREBRO QUE APRENDE",
     text: "\u200B",
     insertAfter: "capitulo-11"
   },
   {
     id: "parte-5",
-    title: "PARTE V — TRANSFORME INGLÊS EM VIDA",
-    label: "",
+    title: "PARTE V",
+    label: "TRANSFORME INGLÊS EM VIDA",
     text: "\u200B",
     insertAfter: "capitulo-15"
   },
   {
     id: "parte-6",
-    title: "PARTE VI — O APRENDIZ QUE NÃO DESISTE",
-    label: "",
+    title: "PARTE VI",
+    label: "O APRENDIZ QUE NÃO DESISTE",
     text: "\u200B",
     insertAfter: "capitulo-19"
   }
