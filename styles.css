@@ -10,7 +10,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html, body { min-height: 100%; }
 
 body {
@@ -20,14 +19,19 @@ body {
     var(--bg);
   color: var(--ink);
   font-family: "Inter", system-ui, sans-serif;
+  overflow: hidden;
 }
 
 button { font: inherit; }
 
 .reader-shell {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1320px, calc(100% - 28px));
+  height: 100dvh;
   margin: 0 auto;
-  padding: 26px 0 34px;
+  padding: 16px 0 18px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 12px;
 }
 
 .site-header,
@@ -40,11 +44,11 @@ button { font: inherit; }
   justify-content: space-between;
 }
 
-.site-header { margin-bottom: 18px; }
+.site-header { min-height: 48px; }
 .site-header h1,
 .toc h2 { margin: 0; font-family: "Literata", Georgia, serif; }
-.site-header h1 { font-size: clamp(1.25rem, 2vw, 1.65rem); }
-.eyebrow { margin: 0 0 4px; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.site-header h1 { font-size: clamp(1.2rem, 1.8vw, 1.55rem); }
+.eyebrow { margin: 0 0 3px; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
 .icon-button,
 .nav-button {
@@ -55,30 +59,35 @@ button { font: inherit; }
   transition: transform .18s ease, background .18s ease, opacity .18s ease;
 }
 
-.icon-button { width: 42px; height: 42px; border-radius: 50%; }
+.icon-button { width: 40px; height: 40px; border-radius: 50%; }
 .icon-button:hover,
 .nav-button:hover { background: #fff; transform: translateY(-1px); }
 
 .book-stage {
   position: relative;
+  min-height: 0;
   display: grid;
-  grid-template-columns: 56px minmax(0, 820px) 56px;
+  grid-template-columns: 54px minmax(0, 1080px) 54px;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-items: stretch;
+  gap: 16px;
   perspective: 1800px;
 }
 
 .book {
   position: relative;
-  min-height: 720px;
+  min-height: 0;
+  height: 100%;
   transform-style: preserve-3d;
 }
 
 .page {
   position: relative;
-  min-height: 720px;
-  padding: 28px 52px 26px;
+  min-height: 0;
+  height: 100%;
+  padding: 22px 46px 18px;
+  display: flex;
+  flex-direction: column;
   background:
     linear-gradient(90deg, rgba(0,0,0,.025), transparent 3%, transparent 97%, rgba(0,0,0,.02)),
     var(--paper);
@@ -87,6 +96,7 @@ button { font: inherit; }
   box-shadow: var(--shadow);
   transform-origin: left center;
   backface-visibility: hidden;
+  overflow: hidden;
 }
 
 .page::after {
@@ -121,11 +131,12 @@ button { font: inherit; }
 }
 
 .page-topbar {
-  min-height: 42px;
-  padding-bottom: 14px;
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--line);
   color: var(--muted);
-  font-size: .82rem;
+  font-size: .78rem;
 }
 
 .timer {
@@ -147,46 +158,63 @@ button { font: inherit; }
 .timer:hover { transform: translateY(-1px); box-shadow: 0 14px 34px rgba(48,39,28,.2); }
 .timer.is-running { background: #eef5f2; }
 .timer.is-expired { background: #fee4e2; color: var(--danger); border-color: rgba(180,35,24,.22); }
-.timer--floating {
-  position: fixed;
-  z-index: 30;
-  top: 18px;
-  right: 18px;
-}
+.timer--floating { position: fixed; z-index: 30; top: 16px; right: 16px; }
 
 .page-content {
-  padding: 32px 0 38px;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 20px 0 14px;
+  overflow: hidden;
   font-family: "Literata", Georgia, serif;
-  font-size: clamp(1.05rem, 1.35vw, 1.22rem);
-  line-height: 1.78;
-  letter-spacing: .003em;
+  font-size: 17px;
+  line-height: 1.54;
+  letter-spacing: .002em;
   hyphens: auto;
 }
 
 .page-content h2 {
-  margin: 0 0 24px;
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
-  line-height: 1.18;
+  margin: 0 0 .8em;
+  font-size: 1.72em;
+  line-height: 1.14;
 }
 
-.page-content p { margin: 0 0 1.2em; }
+.page-content p { margin: 0 0 .78em; }
 .page-content p:last-child { margin-bottom: 0; }
-.page-content .chapter-kicker { font-family: "Inter", sans-serif; color: var(--accent); font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 600; }
+.page-content .chapter-kicker {
+  margin-bottom: .55em;
+  font-family: "Inter", sans-serif;
+  color: var(--accent);
+  font-size: .66em;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 600;
+}
+
+.page-content--measure {
+  position: fixed !important;
+  z-index: -1000;
+  left: -100000px;
+  top: 0;
+  flex: none;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+}
 
 .page-footer {
-  position: absolute;
-  left: 52px;
-  right: 52px;
-  bottom: 24px;
-  padding-top: 12px;
+  position: static;
+  flex: 0 0 auto;
+  min-height: 30px;
+  padding-top: 10px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: .72rem;
+  font-size: .68rem;
 }
 
 .nav-button {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
+  align-self: center;
   border-radius: 50%;
   font-family: Georgia, serif;
   font-size: 2rem;
@@ -195,11 +223,12 @@ button { font: inherit; }
 .nav-button:disabled { opacity: .3; cursor: default; transform: none; }
 
 .reader-controls {
-  width: min(820px, calc(100% - 140px));
-  margin: 20px auto 0;
+  width: min(1080px, calc(100% - 132px));
+  min-height: 20px;
+  margin: 0 auto;
   gap: 14px;
   color: var(--muted);
-  font-size: .78rem;
+  font-size: .75rem;
 }
 
 .progress-track { flex: 1; height: 4px; overflow: hidden; border-radius: 999px; background: rgba(69,58,45,.12); }
@@ -207,12 +236,13 @@ button { font: inherit; }
 
 .toc {
   position: fixed;
-  z-index: 20;
+  z-index: 40;
   top: 0;
   right: 0;
   width: min(390px, 92vw);
-  height: 100vh;
+  height: 100dvh;
   padding: 28px;
+  overflow-y: auto;
   background: #fbf8f2;
   box-shadow: -18px 0 50px rgba(42,34,25,.16);
   transform: translateX(102%);
@@ -222,21 +252,46 @@ button { font: inherit; }
 .toc__list { margin-top: 26px; display: grid; gap: 8px; }
 .toc__list button { padding: 12px 14px; border: 0; border-radius: 10px; background: transparent; text-align: left; cursor: pointer; }
 .toc__list button:hover { background: #f0ebe2; }
-.overlay { position: fixed; z-index: 10; inset: 0; background: rgba(28,23,18,.34); }
+.overlay { position: fixed; z-index: 35; inset: 0; background: rgba(28,23,18,.34); }
 
 @media (max-width: 820px) {
-  .reader-shell { width: min(100% - 18px, 760px); padding-top: 14px; }
-  .site-header { padding-right: 86px; }
-  .book-stage { grid-template-columns: 1fr; gap: 0; }
-  .book { min-height: calc(100vh - 160px); }
-  .page { min-height: calc(100vh - 160px); padding: 22px 24px 22px; border-radius: 4px; }
-  .page-footer { left: 24px; right: 24px; bottom: 18px; }
-  .page-content { padding-top: 24px; font-size: 1rem; line-height: 1.68; }
-  .nav-button { position: fixed; z-index: 8; bottom: 20px; width: 48px; height: 48px; box-shadow: 0 8px 25px rgba(0,0,0,.14); }
-  .nav-button--left { left: 18px; }
-  .nav-button--right { right: 18px; }
-  .reader-controls { width: calc(100% - 128px); margin-top: 14px; }
-  .timer--floating { top: 12px; right: 12px; }
+  body { overflow: hidden; }
+  .reader-shell {
+    width: calc(100% - 14px);
+    height: 100dvh;
+    padding: 8px 0 10px;
+    gap: 7px;
+  }
+  .site-header { min-height: 42px; padding-right: 82px; }
+  .site-header h1 { font-size: 1.05rem; }
+  .eyebrow { font-size: .58rem; }
+  .book-stage { grid-template-columns: 1fr; gap: 0; min-height: 0; }
+  .book { height: 100%; min-height: 0; }
+  .page { height: 100%; min-height: 0; padding: 16px 19px 12px; border-radius: 4px; }
+  .page-topbar { min-height: 30px; padding-bottom: 8px; font-size: .7rem; }
+  .page-content { padding: 15px 0 10px; font-size: 16px; line-height: 1.58; }
+  .page-content h2 { font-size: 1.52em; margin-bottom: .7em; }
+  .page-content p { margin-bottom: .72em; }
+  .page-footer { min-height: 26px; padding-top: 8px; font-size: .62rem; }
+  .nav-button {
+    position: fixed;
+    z-index: 8;
+    bottom: 14px;
+    width: 46px;
+    height: 46px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.14);
+  }
+  .nav-button--left { left: 14px; }
+  .nav-button--right { right: 14px; }
+  .reader-controls { width: calc(100% - 118px); min-height: 18px; }
+  .timer--floating { top: 10px; right: 10px; }
+}
+
+@media (max-height: 620px) and (min-width: 821px) {
+  .reader-shell { padding-top: 8px; padding-bottom: 8px; gap: 7px; }
+  .site-header { min-height: 38px; }
+  .page { padding-top: 16px; padding-bottom: 12px; }
+  .page-content { padding-top: 14px; padding-bottom: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
