@@ -70,8 +70,9 @@
   <link rel="stylesheet" href="part-dividers.css" />
   <link rel="stylesheet" href="teacher-site-button.css" />
   <link rel="stylesheet" href="reader-font-controls.css?v=1" />
+  <link rel="stylesheet" href="reader-transitions.css?v=1" />
 </head>
-<body>
+<body data-page-transition="slide">
   <main class="reader-shell">
     <header class="site-header">
       <div>
@@ -106,6 +107,15 @@
     <div class="reader-controls">
       <span id="progressText">1 / 1</span>
       <div class="progress-track" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div>
+      <div class="transition-picker">
+        <label for="pageTransition">Transição</label>
+        <select id="pageTransition" aria-label="Efeito de transição entre páginas">
+          <option value="slide">Deslizar</option>
+          <option value="fade">Fade</option>
+          <option value="flip">Folha 3D</option>
+          <option value="none">Sem animação</option>
+        </select>
+      </div>
       <form id="pageJumpForm" class="page-jump" aria-label="Ir para uma página específica">
         <label for="pageJumpInput">Página</label>
         <input id="pageJumpInput" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="go" value="1" aria-label="Número da página" />
@@ -166,5 +176,6 @@
   <script src="timer-drag.js"></script>
   <script src="desktop-total-book-pages.js?v=2"></script>
   <script src="reader-font-controls.js?v=1"></script>
+  <script src="reader-transitions.js?v=1"></script>
 </body>
 </html>
