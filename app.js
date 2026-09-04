@@ -3,6 +3,7 @@ const DESKTOP_WORDS_PER_PAGE = 500;
 const TIMER_SECONDS = 5 * 60;
 const TIMER_STORAGE_KEY = "sffil-global-timer";
 const POSITION_STORAGE_KEY = "sffil-reading-position";
+const LOCAL_CONTENT_KEY = "sffil-local-book-content";
 
 const bookEl = document.getElementById("book");
 const pageEl = document.getElementById("page");
@@ -20,6 +21,15 @@ const closeTocButton = document.getElementById("closeToc");
 const tocList = document.getElementById("tocList");
 const overlay = document.getElementById("overlay");
 
+function loadBookContent() {
+  try {
+    const local = JSON.parse(localStorage.getItem(LOCAL_CONTENT_KEY) || "null");
+    if (Array.isArray(local) && local.length) return local;
+  } catch (_) {}
+  return window.BOOK_CONTENT || [];
+}
+
+let bookContent = loadBookContent();
 let pages = [];
 let currentPage = 0;
 let timerInterval = null;
@@ -49,10 +59,7 @@ function sectionToWords(section) {
   const words = [];
   paragraphs.forEach((paragraph, paragraphIndex) => {
     paragraph.split(/\s+/).filter(Boolean).forEach((word, wordIndex) => {
-      words.push({
-        value: word,
-        paragraphBefore: paragraphIndex > 0 && wordIndex === 0
-      });
+      words.push({ value: word, paragraphBefore: paragraphIndex > 0 && wordIndex === 0 });
     });
   });
   return words;
@@ -61,13 +68,9 @@ function sectionToWords(section) {
 function wordsToText(words) {
   let text = "";
   words.forEach((word, index) => {
-    if (index === 0) {
-      text = word.value;
-    } else if (word.paragraphBefore) {
-      text += `\n\n${word.value}`;
-    } else {
-      text += ` ${word.value}`;
-    }
+    if (index === 0) text = word.value;
+    else if (word.paragraphBefore) text += `\n\n${word.value}`;
+    else text += ` ${word.value}`;
   });
   return text;
 }
@@ -115,7 +118,6 @@ function bestDesktopFontSize(html) {
   let low = 12.5;
   let high = 23;
   let best = low;
-
   for (let i = 0; i < 8; i += 1) {
     const mid = (low + high) / 2;
     if (contentFits(html, mid)) {
@@ -131,13 +133,11 @@ function bestDesktopFontSize(html) {
 function paginateDesktopSection(section) {
   const words = sectionToWords(section);
   const sectionPages = [];
-
   for (let start = 0, sectionPageIndex = 0; start < words.length; start += DESKTOP_WORDS_PER_PAGE, sectionPageIndex += 1) {
     const slice = words.slice(start, start + DESKTOP_WORDS_PER_PAGE);
     const text = wordsToText(slice);
     const html = pageHtml(section, text, sectionPageIndex);
     const fontSize = bestDesktopFontSize(html);
-
     sectionPages.push({
       sectionId: section.id,
       sectionTitle: section.title,
@@ -149,7 +149,6 @@ function paginateDesktopSection(section) {
       fontSize
     });
   }
-
   return sectionPages;
 }
 
@@ -169,7 +168,6 @@ function paginateResponsiveSection(section) {
       const mid = Math.floor((low + high) / 2);
       const text = wordsToText(words.slice(start, start + mid));
       const html = pageHtml(section, text, sectionPageIndex);
-
       if (contentFits(html)) {
         best = mid;
         low = mid + 1;
@@ -190,22 +188,16 @@ function paginateResponsiveSection(section) {
       wordCount: slice.length,
       fontSize: null
     });
-
     start += best;
     sectionPageIndex += 1;
   }
-
   return sectionPages;
 }
 
 function getReadingAnchor() {
   if (pages[currentPage]) {
-    return {
-      sectionId: pages[currentPage].sectionId,
-      startWord: pages[currentPage].startWord || 0
-    };
+    return { sectionId: pages[currentPage].sectionId, startWord: pages[currentPage].startWord || 0 };
   }
-
   try {
     return JSON.parse(localStorage.getItem(POSITION_STORAGE_KEY) || "null");
   } catch {
@@ -225,15 +217,13 @@ function restoreReadingAnchor(anchor) {
     anchor.startWord >= page.startWord &&
     anchor.startWord < page.startWord + page.wordCount
   );
-
   if (bestIndex < 0) bestIndex = pages.findIndex(page => page.sectionId === anchor.sectionId);
   currentPage = bestIndex >= 0 ? bestIndex : 0;
 }
 
 function buildPages(anchor = getReadingAnchor()) {
   const paginate = isDesktop() ? paginateDesktopSection : paginateResponsiveSection;
-  pages = window.BOOK_CONTENT.flatMap(paginate);
-
+  pages = bookContent.flatMap(paginate);
   if (!pages.length) {
     pages = [{
       sectionId: "empty",
@@ -246,7 +236,6 @@ function buildPages(anchor = getReadingAnchor()) {
       fontSize: null
     }];
   }
-
   restoreReadingAnchor(anchor);
 }
 
@@ -254,16 +243,12 @@ function saveReadingPosition() {
   const page = pages[currentPage];
   if (!page) return;
   localStorage.setItem("sffil-current-page", String(currentPage));
-  localStorage.setItem(POSITION_STORAGE_KEY, JSON.stringify({
-    sectionId: page.sectionId,
-    startWord: page.startWord || 0
-  }));
+  localStorage.setItem(POSITION_STORAGE_KEY, JSON.stringify({ sectionId: page.sectionId, startWord: page.startWord || 0 }));
 }
 
 function renderPage() {
   const page = pages[currentPage];
   if (!page) return;
-
   pageContentEl.style.fontSize = page.fontSize ? `${page.fontSize}px` : "";
   pageContentEl.innerHTML = pageHtml(page, page.text, page.sectionPageIndex);
   pageLabelEl.textContent = `Página ${currentPage + 1} · ${page.wordCount} palavras`;
@@ -279,12 +264,10 @@ function loadTimerState() {
   try {
     const saved = JSON.parse(localStorage.getItem(TIMER_STORAGE_KEY) || "null");
     if (!saved) return { running: false, remaining: TIMER_SECONDS, endAt: null };
-
     if (saved.running && saved.endAt) {
       const remaining = Math.max(0, Math.ceil((saved.endAt - Date.now()) / 1000));
       return { running: remaining > 0, remaining, endAt: remaining > 0 ? saved.endAt : null };
     }
-
     return {
       running: false,
       remaining: Number.isFinite(saved.remaining) ? Math.max(0, saved.remaining) : TIMER_SECONDS,
@@ -305,7 +288,6 @@ function renderTimer() {
     : timerState.remaining;
 
   if (timerState.running) timerState.remaining = seconds;
-
   if (seconds === 0 && timerState.running) {
     timerState.running = false;
     timerState.endAt = null;
@@ -352,21 +334,18 @@ function initializeTimer() {
 function turnTo(targetIndex, direction) {
   if (targetIndex < 0 || targetIndex >= pages.length || targetIndex === currentPage) return;
   if (pageEl.classList.contains("turn-next") || pageEl.classList.contains("turn-prev")) return;
-
   const animationClass = direction === "next" ? "turn-next" : "turn-prev";
   pageEl.classList.add(animationClass);
-
   window.setTimeout(() => {
     currentPage = targetIndex;
     renderPage();
   }, 305);
-
   pageEl.addEventListener("animationend", () => pageEl.classList.remove(animationClass), { once: true });
 }
 
 function buildToc() {
   tocList.innerHTML = "";
-  window.BOOK_CONTENT.forEach(section => {
+  bookContent.forEach(section => {
     const pageIndex = pages.findIndex(page => page.sectionId === section.id);
     if (pageIndex < 0) return;
     const button = document.createElement("button");
@@ -397,6 +376,7 @@ function repaginate() {
   const anchor = getReadingAnchor();
   pageContentEl.style.fontSize = "";
   requestAnimationFrame(() => {
+    bookContent = loadBookContent();
     buildPages(anchor);
     buildToc();
     renderPage();
@@ -433,6 +413,10 @@ bookEl.addEventListener("touchend", event => {
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(repaginate, 220);
+});
+
+window.addEventListener("storage", event => {
+  if (event.key === LOCAL_CONTENT_KEY) repaginate();
 });
 
 async function initializeReader() {
