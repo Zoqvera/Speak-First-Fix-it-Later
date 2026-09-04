@@ -1,5 +1,6 @@
 .page-content.is-part-divider {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0 7%;
@@ -8,19 +9,31 @@
 }
 
 .page-content.is-part-divider .chapter-kicker {
-  margin: 0;
+  margin: 0 0 .42em;
   max-width: 900px;
   font-family: "Literata", Georgia, serif;
-  font-size: clamp(2rem, 4.7vw, 4.6rem);
-  line-height: 1.12;
-  letter-spacing: .015em;
+  font-size: clamp(2.4rem, 5.4vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: .02em;
   color: var(--ink);
   font-weight: 600;
   text-transform: uppercase;
 }
 
-.page-content.is-part-divider > p:not(.chapter-kicker),
-.page-content.is-part-divider > h2 {
+.page-content.is-part-divider h2 {
+  display: block;
+  margin: 0;
+  max-width: 860px;
+  font-family: "Literata", Georgia, serif;
+  font-size: clamp(1.15rem, 2.2vw, 2rem);
+  line-height: 1.25;
+  letter-spacing: .035em;
+  color: var(--ink);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.page-content.is-part-divider > p:not(.chapter-kicker) {
   display: none;
 }
 
@@ -30,7 +43,12 @@
   }
 
   .page-content.is-part-divider .chapter-kicker {
-    font-size: clamp(1.8rem, 8vw, 3.25rem);
-    line-height: 1.15;
+    font-size: clamp(2rem, 9vw, 3.5rem);
+    line-height: 1.08;
+  }
+
+  .page-content.is-part-divider h2 {
+    font-size: clamp(1rem, 4.8vw, 1.5rem);
+    line-height: 1.28;
   }
 }
