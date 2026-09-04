@@ -22,7 +22,8 @@ body {
   overflow: hidden;
 }
 
-button { font: inherit; }
+button,
+input { font: inherit; }
 
 .reader-shell {
   width: min(1320px, calc(100% - 28px));
@@ -224,7 +225,7 @@ button { font: inherit; }
 
 .reader-controls {
   width: min(1080px, calc(100% - 132px));
-  min-height: 20px;
+  min-height: 34px;
   margin: 0 auto;
   gap: 14px;
   color: var(--muted);
@@ -233,6 +234,41 @@ button { font: inherit; }
 
 .progress-track { flex: 1; height: 4px; overflow: hidden; border-radius: 999px; background: rgba(69,58,45,.12); }
 .progress-bar { height: 100%; width: 0; background: var(--accent); transition: width .3s ease; }
+
+.page-jump {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  color: var(--muted);
+}
+.page-jump label { font-size: .72rem; }
+.page-jump input {
+  width: 64px;
+  height: 30px;
+  padding: 4px 7px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255,255,255,.72);
+  color: var(--ink);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  outline: none;
+}
+.page-jump input:focus { border-color: rgba(47,95,85,.55); box-shadow: 0 0 0 3px rgba(47,95,85,.1); }
+.page-jump button {
+  height: 30px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.page-jump button:hover { filter: brightness(1.06); }
+.page-jump.is-invalid input { border-color: rgba(180,35,24,.7); box-shadow: 0 0 0 3px rgba(180,35,24,.08); }
 
 .toc {
   position: fixed;
@@ -283,7 +319,11 @@ button { font: inherit; }
   }
   .nav-button--left { left: 14px; }
   .nav-button--right { right: 14px; }
-  .reader-controls { width: calc(100% - 118px); min-height: 18px; }
+  .reader-controls { width: calc(100% - 118px); min-height: 30px; gap: 8px; }
+  .progress-track { display: none; }
+  .page-jump { margin-left: auto; }
+  .page-jump label { display: none; }
+  .page-jump input { width: 58px; }
   .timer--floating { top: 10px; right: 10px; }
 }
 
