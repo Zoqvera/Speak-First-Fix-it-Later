@@ -1,0 +1,84 @@
+:root {
+  --book-font-scale: 1;
+}
+
+.font-size-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.font-size-control__label {
+  font-size: .72rem;
+  color: var(--muted);
+}
+
+.font-size-control__button {
+  min-width: 32px;
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255,255,255,.72);
+  color: var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: .72rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.font-size-control__button:hover {
+  background: #fff;
+}
+
+.font-size-control__button:focus-visible {
+  outline: none;
+  border-color: rgba(47,95,85,.55);
+  box-shadow: 0 0 0 3px rgba(47,95,85,.1);
+}
+
+.font-size-control__button:disabled {
+  opacity: .38;
+  cursor: default;
+}
+
+.font-size-control__value {
+  min-width: 42px;
+  text-align: center;
+  font-size: .7rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Somente o conteúdo textual do livro responde à preferência do leitor. */
+.page-content {
+  font-size: calc(17px * var(--book-font-scale));
+}
+
+@media (max-width: 820px) {
+  .page-content {
+    font-size: calc(16px * var(--book-font-scale));
+  }
+
+  .reader-controls {
+    flex-wrap: wrap;
+  }
+
+  .font-size-control {
+    order: 2;
+  }
+
+  .font-size-control__label {
+    display: none;
+  }
+
+  .font-size-control__button {
+    min-width: 30px;
+    padding: 0 6px;
+  }
+
+  .font-size-control__value {
+    min-width: 36px;
+  }
+}
