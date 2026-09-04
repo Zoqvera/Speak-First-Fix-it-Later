@@ -1,5 +1,6 @@
 const WORDS_PER_PAGE = 320;
-const PAGE_SECONDS = 5 * 60;
+const TIMER_SECONDS = 5 * 60;
+const TIMER_STORAGE_KEY = "sffil-global-timer";
 
 const bookEl = document.getElementById("book");
 const pageEl = document.getElementById("page");
@@ -20,7 +21,7 @@ const overlay = document.getElementById("overlay");
 let pages = [];
 let currentPage = Number(localStorage.getItem("sffil-current-page") || 0);
 let timerInterval = null;
-const pageTimers = JSON.parse(localStorage.getItem("sffil-page-timers") || "{}");
+let timerState = loadTimerState();
 
 function escapeHtml(value) {
   return value
@@ -126,41 +127,91 @@ function renderPage() {
   nextButton.disabled = currentPage === pages.length - 1;
 
   localStorage.setItem("sffil-current-page", String(currentPage));
-  startPageTimer();
 }
 
-function timerKey(index) {
-  return `page-${index}`;
-}
+function loadTimerState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(TIMER_STORAGE_KEY) || "null");
+    if (!saved) return { running: false, remaining: TIMER_SECONDS, endAt: null };
 
-function getRemainingSeconds(index) {
-  const key = timerKey(index);
-  if (!pageTimers[key]) {
-    pageTimers[key] = { startedAt: Date.now(), duration: PAGE_SECONDS };
-    saveTimers();
+    if (saved.running && saved.endAt) {
+      const remaining = Math.max(0, Math.ceil((saved.endAt - Date.now()) / 1000));
+      return {
+        running: remaining > 0,
+        remaining,
+        endAt: remaining > 0 ? saved.endAt : null
+      };
+    }
+
+    return {
+      running: false,
+      remaining: Number.isFinite(saved.remaining) ? Math.max(0, saved.remaining) : TIMER_SECONDS,
+      endAt: null
+    };
+  } catch {
+    return { running: false, remaining: TIMER_SECONDS, endAt: null };
   }
-  const elapsed = Math.floor((Date.now() - pageTimers[key].startedAt) / 1000);
-  return Math.max(0, pageTimers[key].duration - elapsed);
 }
 
-function saveTimers() {
-  localStorage.setItem("sffil-page-timers", JSON.stringify(pageTimers));
+function saveTimerState() {
+  localStorage.setItem(TIMER_STORAGE_KEY, JSON.stringify(timerState));
 }
 
-function renderTimer(seconds) {
+function renderTimer() {
+  const seconds = timerState.running && timerState.endAt
+    ? Math.max(0, Math.ceil((timerState.endAt - Date.now()) / 1000))
+    : timerState.remaining;
+
+  if (timerState.running) timerState.remaining = seconds;
+
+  if (seconds === 0 && timerState.running) {
+    timerState.running = false;
+    timerState.endAt = null;
+    timerState.remaining = 0;
+    saveTimerState();
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+
   const minutes = Math.floor(seconds / 60).toString().padStart(2, "0");
   const secs = (seconds % 60).toString().padStart(2, "0");
   timerEl.textContent = `${minutes}:${secs}`;
   timerEl.classList.toggle("is-expired", seconds === 0);
-  timerEl.setAttribute("aria-label", seconds === 0 ? "Tempo de leitura encerrado" : `${minutes} minutos e ${secs} segundos restantes`);
+  timerEl.classList.toggle("is-running", timerState.running);
+
+  if (seconds === 0) {
+    timerEl.setAttribute("aria-label", "Tempo encerrado. Clique para reiniciar o cronômetro de 5 minutos");
+    timerEl.title = "Clique para reiniciar";
+  } else if (timerState.running) {
+    timerEl.setAttribute("aria-label", `${minutes} minutos e ${secs} segundos restantes`);
+    timerEl.title = "Cronômetro em andamento";
+  } else {
+    timerEl.setAttribute("aria-label", "Iniciar cronômetro de 5 minutos");
+    timerEl.title = "Clique para iniciar";
+  }
 }
 
-function startPageTimer() {
+function startTimer() {
+  if (timerState.running) return;
+
+  if (timerState.remaining <= 0) {
+    timerState.remaining = TIMER_SECONDS;
+  }
+
+  timerState.running = true;
+  timerState.endAt = Date.now() + timerState.remaining * 1000;
+  saveTimerState();
+  renderTimer();
+
   clearInterval(timerInterval);
-  renderTimer(getRemainingSeconds(currentPage));
-  timerInterval = setInterval(() => {
-    renderTimer(getRemainingSeconds(currentPage));
-  }, 1000);
+  timerInterval = setInterval(renderTimer, 250);
+}
+
+function initializeTimer() {
+  renderTimer();
+  if (timerState.running) {
+    timerInterval = setInterval(renderTimer, 250);
+  }
 }
 
 function turnTo(targetIndex, direction) {
@@ -214,6 +265,7 @@ nextButton.addEventListener("click", () => turnTo(currentPage + 1, "next"));
 tocButton.addEventListener("click", openToc);
 closeTocButton.addEventListener("click", closeToc);
 overlay.addEventListener("click", closeToc);
+timerEl.addEventListener("click", startTimer);
 
 document.addEventListener("keydown", event => {
   if (event.key === "ArrowRight" || event.key === "PageDown") turnTo(currentPage + 1, "next");
@@ -238,3 +290,4 @@ bookEl.addEventListener("touchend", event => {
 buildPages();
 buildToc();
 renderPage();
+initializeTimer();
