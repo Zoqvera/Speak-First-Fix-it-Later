@@ -15,6 +15,8 @@ const prevButton = document.getElementById("prevPage");
 const nextButton = document.getElementById("nextPage");
 const progressText = document.getElementById("progressText");
 const progressBar = document.getElementById("progressBar");
+const pageJumpForm = document.getElementById("pageJumpForm");
+const pageJumpInput = document.getElementById("pageJumpInput");
 const toc = document.getElementById("toc");
 const tocButton = document.getElementById("tocButton");
 const closeTocButton = document.getElementById("closeToc");
@@ -255,6 +257,9 @@ function renderPage() {
   pageNumberEl.textContent = String(currentPage + 1);
   progressText.textContent = `${currentPage + 1} / ${pages.length}`;
   progressBar.style.width = `${((currentPage + 1) / pages.length) * 100}%`;
+  pageJumpInput.max = String(pages.length);
+  pageJumpInput.value = String(currentPage + 1);
+  pageJumpForm.classList.remove("is-invalid");
   prevButton.disabled = currentPage === 0;
   nextButton.disabled = currentPage === pages.length - 1;
   saveReadingPosition();
@@ -343,6 +348,28 @@ function turnTo(targetIndex, direction) {
   pageEl.addEventListener("animationend", () => pageEl.classList.remove(animationClass), { once: true });
 }
 
+function goToPageNumber(pageNumber) {
+  const targetPage = Number(pageNumber);
+  const isValid = Number.isInteger(targetPage) && targetPage >= 1 && targetPage <= pages.length;
+
+  if (!isValid) {
+    pageJumpForm.classList.add("is-invalid");
+    pageJumpInput.setAttribute("aria-invalid", "true");
+    pageJumpInput.focus();
+    pageJumpInput.select();
+    return;
+  }
+
+  pageJumpForm.classList.remove("is-invalid");
+  pageJumpInput.removeAttribute("aria-invalid");
+  const targetIndex = targetPage - 1;
+  if (targetIndex === currentPage) {
+    pageJumpInput.value = String(currentPage + 1);
+    return;
+  }
+  turnTo(targetIndex, targetIndex > currentPage ? "next" : "prev");
+}
+
 function buildToc() {
   tocList.innerHTML = "";
   bookContent.forEach(section => {
@@ -385,12 +412,21 @@ function repaginate() {
 
 prevButton.addEventListener("click", () => turnTo(currentPage - 1, "prev"));
 nextButton.addEventListener("click", () => turnTo(currentPage + 1, "next"));
+pageJumpForm.addEventListener("submit", event => {
+  event.preventDefault();
+  goToPageNumber(pageJumpInput.value);
+});
+pageJumpInput.addEventListener("input", () => {
+  pageJumpForm.classList.remove("is-invalid");
+  pageJumpInput.removeAttribute("aria-invalid");
+});
 tocButton.addEventListener("click", openToc);
 closeTocButton.addEventListener("click", closeToc);
 overlay.addEventListener("click", closeToc);
 timerEl.addEventListener("click", startTimer);
 
 document.addEventListener("keydown", event => {
+  if (document.activeElement === pageJumpInput) return;
   if (event.key === "ArrowRight" || event.key === "PageDown") turnTo(currentPage + 1, "next");
   if (event.key === "ArrowLeft" || event.key === "PageUp") turnTo(currentPage - 1, "prev");
   if (event.key === "Escape") closeToc();
