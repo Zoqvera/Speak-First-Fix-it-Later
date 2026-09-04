@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Leitor digital do livro Speak First. Fix It Later." />
+  <title>Speak First. Fix It Later.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Inter:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="reader-shell">
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Livro digital</p>
+        <h1>Speak First. Fix It Later.</h1>
+      </div>
+      <button id="tocButton" class="icon-button" type="button" aria-label="Abrir sumário">☰</button>
+    </header>
+
+    <section class="book-stage" aria-label="Leitor do livro">
+      <button id="prevPage" class="nav-button nav-button--left" type="button" aria-label="Página anterior">‹</button>
+
+      <article id="book" class="book" aria-live="polite">
+        <div id="page" class="page">
+          <div class="page-topbar">
+            <span id="pageLabel">Página 1</span>
+            <div id="timer" class="timer" aria-label="Tempo de leitura desta página">05:00</div>
+          </div>
+          <div id="pageContent" class="page-content"></div>
+          <footer class="page-footer">
+            <span>Speak First. Fix It Later.</span>
+            <span id="pageNumber">1</span>
+          </footer>
+        </div>
+      </article>
+
+      <button id="nextPage" class="nav-button nav-button--right" type="button" aria-label="Próxima página">›</button>
+    </section>
+
+    <div class="reader-controls">
+      <span id="progressText">1 / 1</span>
+      <div class="progress-track" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div>
+    </div>
+  </main>
+
+  <aside id="toc" class="toc" aria-hidden="true">
+    <div class="toc__header">
+      <div>
+        <p class="eyebrow">Navegação</p>
+        <h2>Sumário</h2>
+      </div>
+      <button id="closeToc" class="icon-button" type="button" aria-label="Fechar sumário">×</button>
+    </div>
+    <nav id="tocList" class="toc__list"></nav>
+  </aside>
+  <div id="overlay" class="overlay" hidden></div>
+
+  <script src="book-content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
