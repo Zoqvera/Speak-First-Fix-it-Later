@@ -8,10 +8,27 @@ function normalizeForDuplicateCheck(value) {
     .replace(/\s+/g, " ");
 }
 
+function removeConsecutiveDuplicateSentences(paragraph) {
+  const sentences = String(paragraph || "").match(/[^.!?…]+[.!?…]+|[^.!?…]+$/g) || [paragraph];
+  const kept = [];
+  let previous = "";
+
+  for (const sentence of sentences) {
+    const cleanSentence = sentence.trim();
+    const normalized = normalizeForDuplicateCheck(cleanSentence);
+    const isAccidentalDuplicate = normalized.length >= 45 && normalized === previous;
+
+    if (!isAccidentalDuplicate) kept.push(cleanSentence);
+    previous = normalized;
+  }
+
+  return kept.join(" ").trim();
+}
+
 function removeNearbyDuplicateParagraphs(text) {
   const paragraphs = String(text || "")
     .split(/\n\s*\n/)
-    .map(paragraph => paragraph.trim())
+    .map(paragraph => removeConsecutiveDuplicateSentences(paragraph.trim()))
     .filter(Boolean);
 
   const kept = [];
@@ -19,13 +36,13 @@ function removeNearbyDuplicateParagraphs(text) {
 
   for (const paragraph of paragraphs) {
     const normalized = normalizeForDuplicateCheck(paragraph);
-    const isLongEnoughToBeAccidentalDuplicate = normalized.length >= 80;
+    const isLongEnoughToBeAccidentalDuplicate = normalized.length >= 40;
     const duplicateNearby = isLongEnoughToBeAccidentalDuplicate && recent.includes(normalized);
 
     if (!duplicateNearby) {
       kept.push(paragraph);
       recent.push(normalized);
-      if (recent.length > 4) recent.shift();
+      if (recent.length > 6) recent.shift();
     }
   }
 
