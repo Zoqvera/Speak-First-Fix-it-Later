@@ -1,6 +1,7 @@
 (() => {
   const originalPageHtml = pageHtml;
   const originalRenderPage = renderPage;
+  const originalBuildToc = buildToc;
 
   pageHtml = function(section, text, sectionPageIndex) {
     if (section?.sectionId === "cover" || section?.id === "cover" || section?.isCover) {
@@ -45,6 +46,21 @@
     restoreReadingAnchor(anchor);
   };
 
+  buildToc = function() {
+    originalBuildToc();
+
+    const coverButton = document.createElement("button");
+    coverButton.type = "button";
+    coverButton.innerHTML = `<strong>Capa</strong><br><span>Início do livro</span>`;
+    coverButton.addEventListener("click", () => {
+      const direction = currentPage === 0 ? "next" : "prev";
+      closeToc();
+      if (currentPage !== 0) turnTo(0, direction);
+    });
+
+    tocList.prepend(coverButton);
+  };
+
   renderPage = function() {
     originalRenderPage();
     const page = pages[currentPage];
@@ -62,6 +78,8 @@
       buildPages(anchor);
       buildToc();
       renderPage();
+    } else {
+      buildToc();
     }
   }, 0);
 })();
