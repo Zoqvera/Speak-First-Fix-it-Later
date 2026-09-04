@@ -44,7 +44,7 @@
       <div class="progress-track" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div>
       <form id="pageJumpForm" class="page-jump" aria-label="Ir para uma página específica">
         <label for="pageJumpInput">Página</label>
-        <input id="pageJumpInput" type="number" inputmode="numeric" min="1" step="1" value="1" aria-label="Número da página" />
+        <input id="pageJumpInput" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="go" value="1" aria-label="Número da página" />
         <button type="submit">Ir</button>
       </form>
     </div>
