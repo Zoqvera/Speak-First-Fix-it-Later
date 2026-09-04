@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zoqvera.github.io/Speak-First-Fix-it-Later/sitemap.xml
