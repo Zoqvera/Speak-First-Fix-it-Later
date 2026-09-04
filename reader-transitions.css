@@ -1,0 +1,89 @@
+.transition-picker {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  color: var(--muted);
+}
+
+.transition-picker label {
+  font-size: .72rem;
+}
+
+.transition-picker select {
+  height: 30px;
+  padding: 0 28px 0 9px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255,255,255,.72);
+  color: var(--ink);
+  font: inherit;
+  font-size: .72rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.transition-picker select:focus {
+  border-color: rgba(47,95,85,.55);
+  box-shadow: 0 0 0 3px rgba(47,95,85,.1);
+}
+
+/* A classe de direcao continua sendo aplicada pelo leitor; o modo escolhido
+   define qual animacao ela recebe. */
+body[data-page-transition="slide"] .page.turn-next {
+  animation: pageSlideNext .46s cubic-bezier(.22,.61,.36,1);
+}
+body[data-page-transition="slide"] .page.turn-prev {
+  animation: pageSlidePrev .46s cubic-bezier(.22,.61,.36,1);
+}
+
+body[data-page-transition="fade"] .page.turn-next,
+body[data-page-transition="fade"] .page.turn-prev {
+  animation: pageFade .34s ease;
+}
+
+body[data-page-transition="flip"] .page.turn-next {
+  animation: turnNext .62s cubic-bezier(.52,.05,.35,1);
+}
+body[data-page-transition="flip"] .page.turn-prev {
+  animation: turnPrev .62s cubic-bezier(.52,.05,.35,1);
+}
+
+body[data-page-transition="none"] .page.turn-next,
+body[data-page-transition="none"] .page.turn-prev {
+  animation: none !important;
+}
+
+@keyframes pageSlideNext {
+  0% { transform: translateX(0); opacity: 1; }
+  46% { transform: translateX(-42px); opacity: 0; }
+  47% { transform: translateX(42px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pageSlidePrev {
+  0% { transform: translateX(0); opacity: 1; }
+  46% { transform: translateX(42px); opacity: 0; }
+  47% { transform: translateX(-42px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pageFade {
+  0% { opacity: 1; transform: scale(1); }
+  49% { opacity: 0; transform: scale(.992); }
+  50% { opacity: 0; transform: scale(1.008); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 820px) {
+  .transition-picker label { display: none; }
+  .transition-picker select {
+    width: 102px;
+    padding-left: 7px;
+    padding-right: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transition-picker select { scroll-behavior: auto; }
+}
