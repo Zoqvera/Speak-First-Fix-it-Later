@@ -144,7 +144,7 @@ Estas referências são apresentadas como um mapa das menções explícitas feit
   const style = document.createElement("style");
   style.textContent = `
     .page-content p.abnt-reference {
-      font-size: 0.82em;
+      font-size: 0.82em !important;
       line-height: 1.48;
       margin-top: -0.08em;
       margin-bottom: 1em;
@@ -152,11 +152,44 @@ Estas referências são apresentadas como um mapa das menções explícitas feit
   `;
   document.head.appendChild(style);
 
+  const referencesSection = window.BOOK_CONTENT.find(section => section.id === "referencias");
+  const paragraphs = String(referencesSection?.text || "").split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+  let boundaryWord = Infinity;
+  let accumulatedWords = 0;
+
+  for (const paragraph of paragraphs) {
+    if (paragraph === "Referências culturais, cinematográficas e literárias") {
+      boundaryWord = accumulatedWords;
+      break;
+    }
+    accumulatedWords += paragraph.split(/\s+/).filter(Boolean).length;
+  }
+
   function markAbntReferences(root) {
+    root.querySelectorAll("p").forEach(paragraph => paragraph.classList.remove("abnt-reference"));
+
+    let activePage;
+    try {
+      activePage = pages[currentPage];
+    } catch (_) {
+      return;
+    }
+
+    if (!activePage || activePage.sectionId !== "referencias") return;
+
+    let cursor = activePage.startWord || 0;
     root.querySelectorAll("p").forEach(paragraph => {
       const text = paragraph.textContent.trim();
-      const isAbnt = /^[A-ZÀ-ÖØ-Ý][A-ZÀ-ÖØ-Ý'’.-]+,\s/.test(text) && /(?:18|19|20)\d{2}\./.test(text);
+      if (paragraph.classList.contains("chapter-kicker")) return;
+
+      const wordCount = text.split(/\s+/).filter(Boolean).length;
+      const isAcademicHeader = text === "Referências acadêmicas explicitamente identificadas";
+      const isEnumeratedEntry = /^\d+\.\s/.test(text);
+      const startsBeforeCulturalSection = cursor < boundaryWord;
+      const isAbnt = startsBeforeCulturalSection && !isAcademicHeader && !isEnumeratedEntry;
+
       paragraph.classList.toggle("abnt-reference", isAbnt);
+      cursor += wordCount;
     });
   }
 
