@@ -3,6 +3,15 @@
   gap: 0;
 }
 
+/*
+  Os antigos botões visuais de navegação são removidos pelo JavaScript
+  depois que o leitor inicializa. Mantê-los ocultos também no CSS evita
+  que apareçam por alguns instantes durante o carregamento inicial.
+*/
+.nav-button {
+  display: none !important;
+}
+
 .edge-navigation-enabled {
   cursor: default;
   touch-action: manipulation;
