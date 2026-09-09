@@ -4,67 +4,404 @@
 
   intro.title = "Introdução";
   intro.label = "Antes de começar";
-  intro.text = `Talvez você tenha aberto este livro esperando encontrar regras, tempos verbais, listas de palavras, técnicas de pronúncia ou algum método milagroso para “destravar” o inglês. Tudo isso pode ter seu lugar, mas este livro começa em outro ponto. Antes do idioma, existe o aprendiz. Antes da gramática, existe a disposição de continuar. Antes da fluência, existe uma longa sequência de tentativas, esquecimentos, erros, pequenas vitórias, dias de entusiasmo e dias em que abrir o material já parece exigir energia demais.
+  intro.text = `Talvez você tenha aberto este livro esperando encontrar regras, tempos verbais, listas de palavras, técnicas de pronúncia ou algum método capaz de finalmente “destravar” o seu inglês. Tudo isso pode ter seu lugar. Gramática importa. Vocabulário importa. Pronúncia importa. Prática importa. Mas existe algo anterior a todas essas coisas: o aprendiz.
 
-Foi por isso que este livro mudou.
+Antes do idioma, existe uma pessoa tentando aprendê-lo.
 
-Ele nasceu como um livro dividido em capítulos, com explicações extensas sobre aprendizagem, memória, motivação e prática. Aos poucos, porém, ficou claro que sua própria forma precisava dizer a mesma coisa que seu conteúdo. Aprender inglês não acontece em blocos gigantescos. Acontece em encontros sucessivos com a língua. Uma palavra hoje. Uma frase amanhã. Um erro que volta. Uma construção que finalmente faz sentido. Uma música que, de repente, deixa de parecer apenas uma sequência de sons. Por isso, o livro que você tem agora nas mãos foi reorganizado como uma jornada de reflexões curtas e conectadas, pensadas para serem lidas em poucos minutos, mas levadas com você durante muito mais tempo.
+Antes da fluência, existem tentativas.
 
-Cada reflexão é uma pequena parada na viagem. Não foi escrita para resolver o seu inglês em duas páginas, mas para alterar, pouco a pouco, a maneira como você se relaciona com o aprendizado. Algumas reflexões falarão de memória; outras, de medo, vocabulário, rotina, exposição à língua, disciplina, pronúncia, esquecimento, repetição e motivação. Em muitas delas, o tema central aparecerá de maneiras diferentes: você precisa se permitir ser ruim antes de ficar bom.
+Antes da segurança, existe hesitação.
 
-Essa ideia parece simples. Na prática, é uma das coisas mais difíceis de aceitar.
+Antes da frase correta, quase sempre existe alguma frase errada.
 
-Muita gente quer falar inglês bem sem passar pela fase em que fala mal. Quer construir frases corretas sem atravessar o período das frases tortas. Quer compreender filmes sem legenda antes de viver a frustração de entender apenas uma palavra no meio de vinte. É como querer assistir à cena final de Rocky sem acompanhar o treinamento, o cansaço, os tropeços e os socos. A transformação só parece rápida quando pulamos as cenas intermediárias.
+É exatamente nesse território que este livro começa.
 
-Eu conheço essas cenas porque também fui aprendiz antes de ser professor. Aprendi grande parte do meu inglês sozinho, muito antes de transformar a língua em profissão, pesquisa e sala de aula. Não havia uma linha reta. Havia curiosidade, insistência, repetição e improviso. Havia palavras que eu achava ter aprendido e esquecia na semana seguinte. Havia expressões que eu entendia no papel e não reconhecia quando alguém dizia em velocidade normal. Havia aquele momento em que você sabe a resposta em português, estudou aquilo em inglês, mas o cérebro parece ter colocado a palavra numa gaveta sem etiqueta.
+As páginas que você encontrará daqui em diante foram organizadas como uma sequência de reflexões curtas e conectadas sobre o aprendizado da língua inglesa. Cada uma delas foi pensada para ser lida em poucos minutos, mas não necessariamente esquecida quando a página termina. Algumas ideias poderão acompanhá-lo durante uma aula. Outras talvez apareçam quando você estiver ouvindo uma música, assistindo a um filme, tentando conversar com alguém ou procurando uma palavra que parece ter desaparecido justamente quando você mais precisava dela.
 
-Anos depois, estudando Linguística e observando alunos, passei a enxergar com mais clareza algo que já havia vivido na prática: aprender uma segunda língua não é apenas acumular informação. É construir acesso. Não basta “ter visto” uma palavra. É preciso encontrá-la de novo, recuperá-la da memória, ouvi-la em contextos diferentes, usá-la, errá-la, reencontrá-la e, aos poucos, torná-la disponível.
+O objetivo não é oferecer uma coleção de frases motivacionais. Também não é apresentar fórmulas mágicas, promessas de fluência instantânea ou atalhos milagrosos.
 
-A ciência da aprendizagem ajuda a explicar isso. Pesquisas sobre prática de recuperação mostram que tentar lembrar uma informação fortalece a aprendizagem de forma diferente de simplesmente reler. Estudos sobre prática distribuída indicam que revisões espaçadas ao longo do tempo tendem a produzir retenção mais duradoura do que sessões concentradas de estudo. Na aquisição de segunda língua, pesquisadores como Stephen Krashen chamaram atenção para a importância da exposição compreensível, enquanto Merrill Swain destacou que produzir a língua também força o aprendiz a perceber lacunas no que sabe. Em outras palavras: precisamos receber inglês, mas também precisamos nos arriscar a produzi-lo.
+Aprender uma língua é um processo complexo.
 
-É aí que o erro ganha outro significado.
+Exige tempo.
 
-O erro não é uma rachadura no aprendizado. Muitas vezes, ele é o som da obra acontecendo.
+Exige exposição.
 
-Uma das metáforas que atravessa este livro é a construção de um prédio. Se você quiser construir um prédio, precisará de projeto, tempo, trabalhadores, repetição de processos e, sobretudo, material. No idioma, as palavras são os tijolos. Sem vocabulário, não há parede que se sustente. Gramática sem palavras é como um manual de engenharia diante de um terreno vazio. Você pode conhecer as regras do present perfect e ainda assim não conseguir dizer o que fez ontem se não tiver os verbos, os substantivos e as expressões necessários para construir a mensagem.
+Exige memória.
 
-Mas acumular tijolos no terreno também não constrói prédio algum. É preciso usá-los.
+Exige repetição.
 
-Por isso, este livro não defenderá a memorização como uma coleção mecânica de listas. Defenderá memória em movimento. Palavras precisam encontrar contexto. Precisam aparecer em frases, perguntas, histórias, músicas, conversas, leituras e experiências. Quanto mais conexões uma palavra cria, menos ela parece um objeto isolado e mais passa a integrar a arquitetura da língua que você está construindo.
+Exige tentativa.
 
-E toda construção tem andaimes.
+E exige uma quantidade razoável de tolerância consigo mesmo.
 
-No inglês, os andaimes podem ser uma legenda, um dicionário, uma tradução, uma anotação, uma repetição mais lenta, um professor, um aplicativo ou até uma frase decorada. Não há vergonha em usar apoio. O problema seria confundir o andaime com o prédio e nunca tentar caminhar sem ele. Aprender envolve apoio e retirada gradual do apoio.
+Essa última parte talvez seja mais importante do que parece.
 
-Em alguns momentos, você talvez se sinta como Neo em Matrix, descobrindo que existe um sistema inteiro por trás daquilo que antes parecia caos. Em outros, poderá se sentir mais próximo de Dory, de Procurando Nemo, convencido de que acabou de aprender algo e, segundos depois, perguntando onde foi parar a informação. Ambas as sensações fazem parte do processo. O cérebro aprende por padrões, associações, recuperação, repetição e significado; não por uma espécie de download instantâneo.
+Muita gente quer falar inglês bem sem passar pela fase em que fala mal. Quer produzir frases corretas sem atravessar o período das frases incompletas. Quer compreender filmes sem legenda antes de viver a experiência frustrante de reconhecer apenas duas ou três palavras em uma cena inteira.
 
-Também falaremos muito de motivação, mas não da motivação cinematográfica em que alguém acorda transformado, corre ao amanhecer, estuda quatro horas e muda de vida ao som de uma trilha sonora épica. Motivação real é menos glamourosa. Às vezes, ela é apenas sentar e estudar dez minutos mesmo sem vontade. Às vezes, é escolher um vídeo em inglês em vez de um em português. Às vezes, é continuar conversando depois de perceber que usou a preposição errada.
+É como querer chegar à última sequência de Rocky sem acompanhar o treinamento.
 
-A motivação importa, mas não pode ser a única fonte de movimento. Ela oscila. Rotinas, metas pequenas, ambiente e repetição ajudam quando o entusiasmo desaparece. Na prática, o aprendiz que estuda um pouco durante muitos dias costuma construir mais do que aquele que espera pelo sábado perfeito com três horas livres, silêncio absoluto e energia máxima.
+A cena final só parece grandiosa porque houve cansaço antes.
 
-Este livro também quer desmontar uma fantasia: a de que pessoas “boas em inglês” não erram. Erram. O que muda é a relação com o erro, a velocidade de correção e a capacidade de seguir falando sem transformar cada falha em um julgamento sobre a própria inteligência. Fluência não é ausência de imperfeição. É capacidade de continuar produzindo sentido apesar dela.
+Aprender inglês também funciona assim.
 
-Há uma razão para o título Speak First. Fix It Later.
+Existe um lado pouco cinematográfico do processo: repetir palavras, esquecer, tentar lembrar, errar uma preposição, confundir um tempo verbal, voltar ao mesmo conteúdo, ouvir algo várias vezes e ainda não entender tudo.
 
-Ele não significa falar de qualquer maneira para sempre. Não significa desprezar gramática, pronúncia ou precisão. Significa inverter uma prioridade que paralisa muitos aprendizes. Primeiro, permita que a linguagem exista. Depois, refine. Primeiro, coloque a frase no mundo. Depois, ajuste o que precisa ser ajustado. Quem tenta editar cada palavra antes de falar frequentemente termina com uma frase perfeita que nunca foi pronunciada.
+Essas experiências costumam ser interpretadas como sinais de incapacidade.
 
-Ao longo das reflexões, você encontrará ideias que se completam. Algumas parecerão desafiá-lo; outras confirmarão algo que você já suspeitava. Certas mensagens voltarão de propósito, porque aprendizagem também é repetição com variação. Você verá o mesmo princípio por ângulos diferentes até que ele deixe de ser apenas uma ideia interessante e comece a influenciar suas escolhas.
+Na maior parte das vezes, são sinais de aprendizagem acontecendo.
 
-Não existe uma reflexão capaz de ensinar inglês sozinha. Mas uma boa reflexão pode mudar o comportamento que você repete por meses. E é exatamente aí que pequenas ideias podem produzir grandes efeitos.
+Eu conheço esse processo não apenas como professor, mas também como aprendiz.
 
-Se eu pudesse reduzir este livro a uma única promessa, seria esta: você não precisa esperar se sentir pronto para começar a usar o inglês. Ninguém chega ao aprendizado com todos os tijolos organizados, a planta completa e a certeza de que nada dará errado. Construímos enquanto avançamos. Ajustamos paredes. Trocamos peças. Refazemos partes. Descobrimos soluções que não estavam no plano original.
+Grande parte do meu inglês foi construída de maneira autodidata. Houve curiosidade, tentativa, repetição, erros, descobertas e muitos momentos em que aquilo que parecia simples para outras pessoas ainda era difícil para mim.
 
-Aprender inglês é uma obra longa. Mas não precisa ser uma obra triste.
+Aprender inglês sozinho me ensinou algo que posteriormente reencontrei tanto na sala de aula quanto nos estudos sobre linguagem: aprender não significa simplesmente receber informação.
 
-Pode haver curiosidade, humor, cinema, música, descobertas, pequenas obsessões com palavras estranhas e a satisfação quase infantil de perceber que uma frase que antes parecia indecifrável agora faz sentido. Pode haver dias difíceis sem que isso transforme a jornada inteira em fracasso. Pode haver lentidão sem estagnação.
+Significa construir acesso a ela.
 
-Então leia estas reflexões como quem constrói. Uma de cada vez. Sem a ansiedade de terminar tudo imediatamente. Algumas servirão como tijolos. Outras como ferramentas. Algumas talvez funcionem como janelas, porque mudarão a maneira como você enxerga o próprio aprendizado.
+Você pode ter visto uma palavra vinte vezes e ainda não conseguir recuperá-la quando precisa falar.
 
-E, quando chegar a hora de falar, fale.
+Pode compreender uma estrutura quando lê e travar quando tenta produzi-la.
+
+Pode reconhecer uma expressão em um exercício e não percebê-la quando ela aparece rapidamente em uma conversa.
+
+Isso não significa necessariamente que você “não aprendeu nada”.
+
+Significa que aprendizagem, reconhecimento e uso espontâneo não são exatamente a mesma coisa.
+
+Nos estudos sobre memória, há evidências consistentes de que recuperar uma informação ativamente pode fortalecer sua retenção. A chamada prática de recuperação mostra que tentar lembrar pode ser mais produtivo do que simplesmente reler repetidamente.
+
+Pesquisas sobre prática distribuída também sugerem que o aprendizado tende a se tornar mais duradouro quando o contato com o conteúdo é espaçado ao longo do tempo.
+
+Em termos simples: seu cérebro gosta de reencontros.
+
+Você vê uma palavra.
+
+Depois a encontra novamente.
+
+Algum tempo mais tarde, tenta usá-la.
+
+Esquece.
+
+Encontra outra vez.
+
+Escuta em uma música.
+
+Reconhece em um filme.
+
+Usa numa conversa.
+
+Em algum momento, aquilo que parecia uma visitante começa a morar na memória.
+
+É por isso que esquecer não deve ser tratado como uma catástrofe.
+
+O esquecimento também participa da aprendizagem.
+
+Uma língua não entra na cabeça como um arquivo transferido de um computador para outro.
+
+Ela é construída por exposição, atenção, uso, associação, repetição, interação e recuperação.
+
+Os estudos sobre aquisição de segunda língua também ajudam a compreender essa dinâmica.
+
+Stephen Krashen chamou atenção para a importância do contato com linguagem compreensível. Merrill Swain enfatizou que produzir a língua também exerce uma função fundamental, porque, ao tentar falar ou escrever, percebemos lacunas que talvez permanecessem invisíveis apenas durante a compreensão.
+
+Michael Long destacou o papel da interação e da negociação de significado.
+
+Existem diferenças teóricas importantes entre essas abordagens, mas todas apontam para uma conclusão prática relevante: aprender uma língua exige relação real com a língua.
+
+Você precisa encontrá-la.
+
+Ouvi-la.
+
+Lê-la.
+
+Tentá-la.
+
+Usá-la.
+
+E, inevitavelmente, errá-la.
+
+O erro será uma presença constante neste livro porque considero que ele ocupa uma posição central no desenvolvimento de qualquer aprendiz.
+
+O erro não é uma rachadura no prédio.
+
+Muitas vezes, é o som da construção.
+
+Essa metáfora do prédio aparecerá várias vezes nas próximas páginas.
+
+Imagine que aprender inglês seja construir um edifício.
+
+As palavras são os tijolos.
+
+Sem vocabulário, não existe material suficiente para levantar quase nada.
+
+Você pode compreender perfeitamente como funciona uma estrutura gramatical, mas ainda assim não conseguir dizer o que pensa se não tiver palavras suficientes para carregar a ideia.
+
+Nesse sentido, gramática sem vocabulário se parece com um excelente projeto arquitetônico diante de um terreno vazio.
+
+Você sabe como construir.
+
+Só faltam os materiais.
+
+Mas existe outro problema.
+
+Uma pilha enorme de tijolos também não é um prédio.
+
+Memorizar milhares de palavras sem utilizá-las não garante comunicação.
+
+Os tijolos precisam ser combinados.
+
+Transformados em paredes.
+
+Ligados a portas, corredores, escadas e janelas.
+
+No idioma, isso significa conectar palavras a frases, contextos, experiências, sons, imagens, histórias, perguntas, respostas e intenções comunicativas.
+
+Quanto mais conexões uma palavra cria, mais provável é que ela permaneça disponível.
+
+É por isso que este livro tratará a memória não como armazenamento, mas como movimento.
+
+Você não precisa simplesmente guardar inglês.
+
+Precisa movimentá-lo.
+
+Também encontrará aqui reflexões sobre motivação.
+
+Mas não estou falando da motivação cinematográfica em que alguém acorda às cinco da manhã, olha para o horizonte, coloca uma música épica e decide transformar completamente a própria vida.
+
+Essa motivação existe.
+
+Normalmente dura menos do que gostaríamos.
+
+A aprendizagem real ocorre principalmente nos dias comuns.
+
+Na terça-feira em que você está cansado.
+
+No sábado em que não está com vontade.
+
+Naquela semana em que parece que seu inglês não avançou absolutamente nada.
+
+Motivação ajuda.
+
+Rotina ajuda mais.
+
+O aprendiz que estuda um pouco regularmente costuma construir mais do que aquele que estuda intensamente de vez em quando.
+
+Isso acontece porque a língua precisa reaparecer na vida.
+
+Precisamos reduzir a distância entre um encontro e outro.
+
+É exatamente por isso que pequenas práticas podem ser tão poderosas.
+
+Dez minutos de leitura.
+
+Um vídeo curto.
+
+Uma conversa.
+
+Cinco frases.
+
+Uma música acompanhada pela letra.
+
+Uma página de um livro.
+
+Alguns minutos tentando pensar em inglês.
+
+Nada disso parece espetacular.
+
+Mas prédios também não surgem quando observamos um único tijolo.
+
+Eles aparecem quando centenas e depois milhares deles são colocados no lugar certo.
+
+Há ainda outro elemento que acompanhará estas reflexões: identidade.
+
+Quando você aprende outra língua, existe um período estranho em que sua inteligência parece diminuir.
+
+É apenas uma impressão.
+
+Em português, você talvez seja engraçado, eloquente, irônico, preciso e rápido.
+
+Em inglês, pode se transformar temporariamente em alguém capaz de dizer apenas:
+
+“I like this.”
+
+“It is very good.”
+
+“I don’t know.”
+
+Existe uma diferença dolorosa entre aquilo que você pensa e aquilo que consegue expressar.
+
+Sua mente tem alta definição.
+
+Seu inglês ainda está carregando a imagem.
+
+Essa experiência exige humildade.
+
+Você precisa aceitar que sua personalidade linguística será, por algum tempo, menor do que você.
+
+Mas ela cresce.
+
+Cada nova palavra amplia o espaço.
+
+Cada estrutura automatizada reduz o esforço.
+
+Cada conversa torna o caminho um pouco mais familiar.
+
+Com o tempo, você deixa de montar cada frase como quem monta um móvel sem manual.
+
+Algumas coisas simplesmente começam a aparecer.
+
+É nesse momento que a fluência começa a ser percebida.
+
+Não como perfeição.
+
+Mas como continuidade.
+
+Fluência não significa nunca errar.
+
+Significa conseguir continuar mesmo quando existe um erro.
+
+Essa distinção é fundamental.
+
+Há pessoas que conhecem muito inglês, mas falam pouco porque querem revisar mentalmente cada frase antes de produzi-la.
+
+O pensamento passa por uma espécie de alfândega gramatical.
+
+O verbo está correto?
+
+A preposição está certa?
+
+Essa palavra realmente existe?
+
+Pronunciei isso corretamente?
+
+Enquanto todas as autorizações são verificadas, a conversa já avançou.
+
+É aí que surge a ideia que dá nome a este livro:
+
+Speak First. Fix It Later.
+
+Fale primeiro.
+
+Corrija depois.
+
+Isso não significa desprezar a precisão.
+
+Significa compreender que comunicação e correção podem ocupar momentos diferentes.
+
+Primeiro permita que a língua exista.
+
+Depois refine.
+
+Primeiro construa.
+
+Depois faça acabamento.
+
+Primeiro coloque a frase no mundo.
+
+Depois observe o que pode ser melhorado.
+
+Essa mudança de ordem pode parecer pequena, mas altera profundamente a relação com o idioma.
+
+Ela transforma o erro de sentença em informação.
+
+Transforma a dúvida de bloqueio em pergunta.
+
+Transforma imperfeição em etapa.
+
+Ao longo deste livro, algumas ideias aparecerão mais de uma vez.
+
+Isso é proposital.
+
+Aprender também significa reencontrar.
+
+Uma ideia que não produz efeito na primeira leitura talvez faça sentido cinquenta páginas depois.
+
+Uma frase pode parecer evidente hoje e tornar-se necessária em outro momento da sua jornada.
+
+Cada reflexão foi pensada como uma pequena peça de uma construção maior.
+
+Algumas funcionarão como tijolos.
+
+Outras como ferramentas.
+
+Outras talvez sejam janelas.
+
+Elas não ensinarão inglês sozinhas.
+
+Mas podem alterar a maneira como você aprende inglês.
+
+E isso pode mudar muito.
+
+Porque, no fim, nenhum método funciona independentemente do comportamento de quem aprende.
+
+Você pode possuir o melhor curso.
+
+O melhor professor.
+
+O melhor aplicativo.
+
+O melhor livro.
+
+Mas ainda precisará aparecer.
+
+Precisará voltar.
+
+Precisará praticar.
+
+Precisará aceitar períodos em que o progresso é pouco visível.
+
+Precisará continuar construindo mesmo quando o prédio ainda parece baixo.
+
+Aprender inglês é uma jornada longa.
+
+Mas não precisa ser uma jornada triste.
+
+Pode haver curiosidade.
+
+Humor.
+
+Filmes.
+
+Música.
+
+Conversas.
+
+Descobertas.
+
+Palavras estranhas.
+
+Pequenas vitórias.
+
+Pode haver aquele momento quase mágico em que você percebe que entendeu uma frase sem traduzi-la.
+
+Depois outra.
+
+Depois uma conversa inteira.
+
+Até que aquilo que antes parecia estrangeiro começa a parecer familiar.
+
+Então leia estas reflexões sem pressa.
+
+Uma de cada vez.
+
+Carregue algumas com você.
+
+Discorde de outras.
+
+Teste as ideias.
+
+Observe seu comportamento.
+
+Construa.
+
+E quando chegar a hora de falar, fale.
 
 Mesmo com sotaque.
+
 Mesmo com dúvida.
+
 Mesmo com uma palavra faltando.
+
 Mesmo que a frase precise de reforma depois.
 
 Speak first.
