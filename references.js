@@ -7,6 +7,11 @@ window.BOOK_CONTENT.push({
 
 1. Edward Deci e Richard Ryan — Teoria da Autodeterminação e motivação. Reflexões 1, 5 e 22.
 
+DECI, Edward L.; RYAN, Richard M. (2000). The “What” and “Why” of Goal Pursuits: Human Needs and the Self-Determination of Behavior. Psychological Inquiry, 11(4), 227–268.
+
+DOI: 10.1207/S15327965PLI1104_01.
+Acesso pelo DOI: https://doi.org/10.1207/S15327965PLI1104_01
+
 2. Zoltán Dörnyei — motivação em segunda língua e visão do futuro eu em L2. Reflexões 2, 7, 10 e 95.
 
 3. Stephen Krashen — input compreensível e hipótese do i+1. Reflexões 8, 25, 45, 64 e 111. Também citado na Introdução e no Epílogo.
