@@ -1,11 +1,13 @@
 window.BOOK_CONTENT = Array.isArray(window.BOOK_CONTENT) ? window.BOOK_CONTENT : [];
-window.BOOK_CONTENT.push({
-  id: "capitulo-11",
-  title: "Capítulo 11",
-  label: "Torne-se o professor do próprio aprendizado",
-  text: `Reflexão 50 — Pare de dizer que seu inglês é ruim
 
-“Meu inglês é ruim.”
+const chapterElevenIndex = window.BOOK_CONTENT.findIndex(section => section.id === "capitulo-11");
+
+const chapterElevenReflections = [
+  {
+    id: "reflexao-50",
+    title: "Reflexão 50",
+    label: "Pare de dizer que seu inglês é ruim",
+    text: `“Meu inglês é ruim.”
 
 Talvez essa seja uma das frases menos úteis que um estudante pode dizer sobre si mesmo.
 
@@ -53,11 +55,13 @@ E talvez uma das mudanças mais importantes na trajetória de quem aprende uma l
 
 e passa a ser:
 
-“O que, exatamente, eu preciso melhorar agora?”
-
-Reflexão 51 — Não procure o melhor método. Procure a ferramenta certa.
-
-Existe uma indústria inteira construída em torno da promessa do “melhor método para aprender inglês”.
+“O que, exatamente, eu preciso melhorar agora?”`
+  },
+  {
+    id: "reflexao-51",
+    title: "Reflexão 51",
+    label: "Não procure o melhor método. Procure a ferramenta certa.",
+    text: `Existe uma indústria inteira construída em torno da promessa do “melhor método para aprender inglês”.
 
 Talvez você já tenha encontrado vários.
 
@@ -121,11 +125,13 @@ E, no final das contas, até a fluência é um meio.
 
 Porque o objetivo nunca deveria ser simplesmente possuir inglês.
 
-É poder fazer alguma coisa com ele.
-
-Reflexão 52 — Não deixe a inteligência artificial fazer suas flexões por você
-
-Nunca tivemos tantas ferramentas para aprender uma língua.
+É poder fazer alguma coisa com ele.`
+  },
+  {
+    id: "reflexao-52",
+    title: "Reflexão 52",
+    label: "Não deixe a inteligência artificial fazer suas flexões por você",
+    text: `Nunca tivemos tantas ferramentas para aprender uma língua.
 
 Hoje você pode pedir a uma inteligência artificial que explique uma expressão, corrija um texto, crie exercícios, simule uma entrevista, converse em inglês, adapte uma notícia ao seu nível ou explique por que determinada frase está errada.
 
@@ -195,11 +201,13 @@ Mas existe uma parte que continua sendo sua.
 
 Porque esforço cognitivo não é um defeito do processo.
 
-Muitas vezes, é justamente o lugar onde a aprendizagem acontece.
-
-Reflexão 53 — Seu sentimento não é uma boa régua para medir seu progresso
-
-Há dias em que você sentirá que seu inglês melhorou muito.
+Muitas vezes, é justamente o lugar onde a aprendizagem acontece.`
+  },
+  {
+    id: "reflexao-53",
+    title: "Reflexão 53",
+    label: "Seu sentimento não é uma boa régua para medir seu progresso",
+    text: `Há dias em que você sentirá que seu inglês melhorou muito.
 
 Em outros, poderá ter a impressão de que esqueceu tudo.
 
@@ -265,11 +273,13 @@ aprender em seu lugar.
 
 Autonomia madura não é rejeitar ajuda.
 
-É saber quando você precisa dela — e o que fazer depois que a recebe.
-
-Reflexão 54 — Um dia, o inglês precisa deixar de ser o centro
-
-Existe uma etapa curiosa na aprendizagem de uma língua.
+É saber quando você precisa dela — e o que fazer depois que a recebe.`
+  },
+  {
+    id: "reflexao-54",
+    title: "Reflexão 54",
+    label: "Um dia, o inglês precisa deixar de ser o centro",
+    text: `Existe uma etapa curiosa na aprendizagem de uma língua.
 
 No começo, tudo gira em torno dela.
 
@@ -368,4 +378,11 @@ Você observa.
 Você corrige.
 
 E continua.`
-});
+  }
+];
+
+if (chapterElevenIndex >= 0) {
+  window.BOOK_CONTENT.splice(chapterElevenIndex, 1, ...chapterElevenReflections);
+} else {
+  window.BOOK_CONTENT.push(...chapterElevenReflections);
+}
