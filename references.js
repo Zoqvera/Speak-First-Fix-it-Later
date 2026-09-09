@@ -139,3 +139,31 @@ Referências culturais, cinematográficas e literárias
 
 Estas referências são apresentadas como um mapa das menções explícitas feitas ao longo do livro, indicando onde cada autor, conceito, obra, personagem ou referência cultural aparece nas reflexões e, quando aplicável, na Introdução ou no Epílogo.`
 });
+
+(function styleAbntReferences() {
+  const style = document.createElement("style");
+  style.textContent = `
+    .page-content p.abnt-reference {
+      font-size: 0.82em;
+      line-height: 1.48;
+      margin-top: -0.08em;
+      margin-bottom: 1em;
+    }
+  `;
+  document.head.appendChild(style);
+
+  function markAbntReferences(root) {
+    root.querySelectorAll("p").forEach(paragraph => {
+      const text = paragraph.textContent.trim();
+      const isAbnt = /^[A-ZÀ-ÖØ-Ý][A-ZÀ-ÖØ-Ý'’.-]+,\s/.test(text) && /(?:18|19|20)\d{2}\./.test(text);
+      paragraph.classList.toggle("abnt-reference", isAbnt);
+    });
+  }
+
+  const pageContent = document.getElementById("pageContent");
+  if (!pageContent) return;
+
+  const observer = new MutationObserver(() => markAbntReferences(pageContent));
+  observer.observe(pageContent, { childList: true, subtree: true });
+  markAbntReferences(pageContent);
+})();
