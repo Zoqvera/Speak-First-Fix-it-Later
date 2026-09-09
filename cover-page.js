@@ -74,17 +74,6 @@
   buildToc = function() {
     originalBuildToc();
 
-    const rightsButton = document.createElement("button");
-    rightsButton.type = "button";
-    rightsButton.innerHTML = `<strong>Informações da obra</strong><br><span>Reprodução e citação</span>`;
-    rightsButton.addEventListener("click", () => {
-      const target = pages.findIndex(page => page.sectionId === "rights-citation");
-      if (target < 0) return;
-      const direction = target >= currentPage ? "next" : "prev";
-      closeToc();
-      if (currentPage !== target) turnTo(target, direction);
-    });
-
     const coverButton = document.createElement("button");
     coverButton.type = "button";
     coverButton.innerHTML = `<strong>Capa</strong><br><span>Início do livro</span>`;
@@ -94,7 +83,6 @@
       if (currentPage !== 0) turnTo(0, direction);
     });
 
-    tocList.prepend(rightsButton);
     tocList.prepend(coverButton);
   };
 
