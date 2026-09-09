@@ -2,13 +2,6 @@ window.BOOK_CONTENT = Array.isArray(window.BOOK_CONTENT) ? window.BOOK_CONTENT :
 
 const BOOK_PART_DIVIDERS = [
   {
-    id: "parte-1",
-    title: "PARTE I",
-    label: "ANTES DO INGLÊS, EXISTE O APRENDIZ",
-    text: "\u200B",
-    insertAfter: "introducao"
-  },
-  {
     id: "parte-2",
     title: "PARTE II",
     label: "PERMITA-SE SER RUIM",
