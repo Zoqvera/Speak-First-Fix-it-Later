@@ -15,7 +15,7 @@
     if (section?.sectionId === "rights-citation" || section?.id === "rights-citation" || section?.isRightsCitation) {
       return `
         <div class="rights-citation-page">
-          <p>Esta obra pode ser reproduzida livremente em qualquer mídia e formato.</p>
+          <p>Esta obra pode ser livremente copiada, reproduzida, distribuída, compartilhada e reutilizada, total ou parcialmente, em qualquer mídia ou formato, sem necessidade de autorização prévia do autor.</p>
           <p>Para citar essa obra, utilize a seguinte referência:</p>
           <p class="rights-citation-reference">FREITAS, Flávio de Sousa. <em>Speak First. Fix It Later.</em> [S. l.]: [s. n.], 2026. E-book. Disponível em: https://zoqvera.github.io/Speak-First-Fix-it-Later/.</p>
         </div>
