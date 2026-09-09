@@ -61,4 +61,4 @@ try {
 } catch (_) {}
 
 // Load the Chapter 22 reflection replacement synchronously before app.js builds the book.
-document.write('<script src="chapter-22-reflections.js?v=1"><\\/script>');
+document.write('<script src="chapter-22-reflections.js?v=1"></script>');
