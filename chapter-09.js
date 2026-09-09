@@ -1,463 +1,294 @@
 window.BOOK_CONTENT = Array.isArray(window.BOOK_CONTENT) ? window.BOOK_CONTENT : [];
-window.BOOK_CONTENT.push({
-  id: "capitulo-9",
-  title: "Capítulo 9",
-  label: "Pronúncia: ser compreendido antes de soar perfeito",
-  text: `Pronúncia é um dos temas mais emocionais do aprendizado de inglês.
 
-Poucas coisas fazem um adulto se sentir tão exposto quanto produzir um som estranho diante de outra pessoa.
+const chapterNineReflections = [
+  {
+    id: "reflexao-40",
+    title: "Reflexão 40",
+    label: "Sua voz também precisa aprender inglês",
+    text: `Durante muito tempo, você pode estudar inglês sem realmente se colocar dentro dele.
 
-Você sabe o que quer dizer.
+Você aprende palavras. Memoriza estruturas. Entende frases. Assiste a vídeos. Faz exercícios. Talvez até consiga compreender boa parte do que escuta. Mas existe um momento em que todo esse conhecimento precisa atravessar uma fronteira: ele precisa chegar à sua voz.
 
-Conhece a palavra.
+E essa travessia é diferente.
 
-Talvez tenha escrito aquela palavra dezenas de vezes.
+Falar não é simplesmente retirar palavras de uma gaveta mental e organizá-las corretamente. Falar é aparecer.
 
-Mas, quando precisa pronunciá-la, sente como se a boca tivesse recebido instruções de montagem em outro idioma.
+Talvez seja por isso que tantas pessoas conseguem responder perfeitamente a um exercício escrito e, poucos minutos depois, travam quando alguém pergunta: What do you think?
 
-Isso é normal.
+O problema não é necessariamente falta de inglês.
 
-Aprender uma nova língua envolve também aprender novos movimentos.
+Às vezes, é excesso de consciência sobre si mesmo.
 
-A pronúncia não está apenas na cabeça.
+Quando você fala, sua pronúncia aparece. Suas hesitações aparecem. Seu sotaque aparece. Suas limitações aparecem. Você deixa de ser apenas alguém que estuda inglês e passa a ser alguém que está tentando existir naquele idioma.
 
-Está na coordenação entre percepção auditiva, língua, lábios, mandíbula, fluxo de ar, ritmo e memória motora.
+A pesquisadora Merrill Swain chamou atenção para a importância do output na aquisição de uma segunda língua. Quando tentamos produzir linguagem, percebemos lacunas que muitas vezes permanecem invisíveis enquanto apenas escutamos ou lemos.
 
-Por isso, não basta “saber” intelectualmente como uma palavra é pronunciada. Você precisa treinar o gesto.
+A fala funciona como um espelho.
 
-Quando aprendi inglês sozinho, havia sons que eu tentava reproduzir simplesmente imitando aquilo que ouvia em músicas e filmes. Nem sempre acertava. Às vezes, só anos depois percebia que havia construído uma pronúncia aproximada demais com base na ortografia.
+E nem sempre gostamos do primeiro reflexo.
 
-Esse é um ponto importante para brasileiros: a escrita pode enganar.
+Quando aprendi inglês sozinho, também precisei atravessar essa fase. Durante muito tempo, havia muito mais inglês dentro da minha cabeça do que saindo da minha boca. Descobri que conhecimento acumulado não se transforma automaticamente em comunicação.
 
-Em português, embora existam irregularidades, a relação entre letra e som é relativamente mais previsível em muitos contextos. Em inglês, a ortografia guarda marcas históricas que tornam essa relação muito menos transparente.
+É preciso abrir a porta.
 
-“Though.”
+No filme The King’s Speech, a dificuldade de falar não é simplesmente uma questão de produzir sons. Existe identidade, medo, exposição e expectativa envolvidas naquela voz.
 
-“Through.”
+Aprender outra língua também possui algo disso.
 
-“Thought.”
+Você não precisa esperar que sua voz esteja perfeita para permitir que ela exista.
 
-“Tough.”
+Sua voz aprende inglês falando inglês.
 
-Quatro palavras que parecem ter sido criadas numa reunião em que alguém decidiu testar a paciência dos estrangeiros.
+O restante pode ser corrigido depois.
 
-A consequência é simples: não aprenda pronúncia apenas olhando.
+Speak first. Fix it later.`
+  },
+  {
+    id: "reflexao-41",
+    title: "Reflexão 41",
+    label: "Existe uma versão de você que só aparece em outra língua",
+    text: `Talvez você já tenha percebido algo curioso: não somos exatamente a mesma pessoa em todas as línguas.
 
-Ouça.
+Há coisas que dizemos de uma maneira em português e de outra em inglês. Certas expressões parecem naturais em um idioma e estranhas em outro. Às vezes até nossa postura, nosso humor ou nossa maneira de organizar pensamentos muda discretamente quando mudamos de língua.
 
-Sempre que possível, associe palavra nova a áudio.
+Isso acontece porque aprender uma língua não significa apenas aprender nomes diferentes para as mesmas coisas.
 
-Isso evita construir uma forma sonora imaginária que depois precisará ser desmontada.
+Significa aprender novas maneiras de participar do mundo.
 
-Mas antes de qualquer técnica, precisamos definir o objetivo.
+A pesquisadora Bonny Norton tornou a relação entre língua e identidade uma questão central nos estudos sobre aquisição de segunda língua. Quando alguém aprende outro idioma, não está apenas acumulando competência linguística. Está negociando quem pode ser dentro de determinadas comunidades e relações sociais.
 
-Você precisa soar como um americano?
+Por isso falar inglês pode parecer tão estranho no começo.
 
-Como um britânico?
+Você ainda está conhecendo essa versão de si mesmo.
 
-Como alguém de Londres, Nova York, Sydney ou Dublin?
+Quando comecei a aprender inglês sozinho, não recebi pronta uma identidade de “falante de inglês”. Precisei construí-la lentamente. Cada palavra pronunciada era quase um pequeno tijolo colocado em um prédio cuja forma final eu ainda não conseguia enxergar.
 
-Na maioria dos casos, não.
+No início, tudo parecia emprestado.
 
-O objetivo mais importante é inteligibilidade.
+As palavras eram dos livros.
 
-Ser compreendido de forma consistente.
+As expressões eram dos filmes.
 
-A pesquisa sobre ensino de pronúncia em inglês como língua internacional e como língua franca vem enfatizando há décadas que sotaque estrangeiro e falta de inteligibilidade não são a mesma coisa. Pesquisadoras como Jennifer Jenkins discutiram quais aspectos fonológicos parecem ser mais importantes para comunicação internacional entre falantes de diferentes línguas.
+A pronúncia era uma tentativa de imitar outras pessoas.
 
-Isso é libertador.
+Até que alguma coisa mudou.
 
-Você não precisa apagar sua história linguística.
+O inglês começou a deixar de ser apenas algo que eu reproduzia e começou a se tornar algo que eu usava para dizer o que realmente pensava.
 
-Sotaque não é defeito moral.
+Essa mudança é decisiva.
 
-Todo mundo tem sotaque.
+Existe uma diferença enorme entre dizer uma frase porque ela estava no exercício e dizer uma frase porque você precisava dela naquele momento.
 
-A pergunta útil é:
+É nesse segundo instante que o idioma começa a pertencer a você.
 
-“Minha pronúncia facilita ou dificulta a compreensão?”
+Pense em The Matrix. Neo passa boa parte da história descobrindo uma possibilidade de si mesmo que sempre esteve ali, mas que ainda precisava ser experimentada.
 
-Essa pergunta nos leva a prioridades melhores.
+Com uma nova língua acontece algo semelhante, em escala muito mais cotidiana.
 
-Alguns contrastes sonoros podem mudar palavras.
+Existe uma versão de você capaz de conversar, argumentar, brincar, perguntar, discordar, explicar e criar vínculos em inglês.
 
-“Ship” e “sheep.”
+Você não precisa encontrá-la pronta.
 
-“Live” e “leave.”
+Você a constrói enquanto fala.`
+  },
+  {
+    id: "reflexao-42",
+    title: "Reflexão 42",
+    label: "Falar exige coragem para ser imperfeito em público",
+    text: `Há uma razão pela qual errar sozinho parece muito menos grave do que errar diante de outra pessoa.
 
-“Beach” e uma palavra que você provavelmente prefere não pronunciar errado numa conversa formal.
+O erro deixa de ser apenas linguístico.
 
-Esses contrastes merecem atenção porque interferem diretamente em significado.
+Ele se torna social.
 
-Outros aspectos, como a realização exata de um som específico, podem ser menos críticos dependendo do contexto, desde que a palavra continue reconhecível.
+Você imagina o julgamento do outro. Pensa na pronúncia. Percebe a demora para encontrar uma palavra. Começa uma frase sem saber exatamente como terminar. E, de repente, uma pequena conversa parece uma prova oral diante de uma banca examinadora invisível.
 
-Isso significa que pronúncia deve ser estratégica.
+É nesse momento que muitos aprendizes recuam.
 
-Treine o que aumenta inteligibilidade.
+Eles pensam: “Vou falar quando estiver melhor.”
 
-Uma das primeiras áreas é a sílaba tônica.
+O problema é que falar melhor depende justamente de falar antes de estar melhor.
 
-Em inglês, colocar a tonicidade no lugar errado pode tornar uma palavra surpreendentemente difícil de reconhecer.
+Esse paradoxo acompanha praticamente toda aprendizagem real.
 
-“PHOtograph.”
+Ninguém aprende a nadar esperando dominar todos os movimentos antes de entrar na água.
 
-“phoTOgraphy.”
+A fala é a água do idioma.
 
-“photoGRAphic.”
+Você pode estudar sua composição química durante anos, mas em algum momento precisará se molhar.
 
-A família lexical muda o padrão de estresse.
+Quando aprendi inglês sozinho, não havia um professor permanentemente ao meu lado dizendo quando eu estava pronto. Precisei descobrir algo que hoje considero fundamental para qualquer aprendiz: a sensação de estar preparado quase sempre chega depois da prática, não antes dela.
 
-O aluno pode produzir todos os sons individuais de forma razoável e ainda assim soar estranho porque a música da palavra está errada.
+A confiança é frequentemente consequência da ação.
 
-Por isso, não aprenda apenas sequência de fonemas.
+Não seu pré-requisito.
 
-Aprenda ritmo interno.
+Estudos sobre disposição para se comunicar em uma segunda língua mostram justamente que conhecimento linguístico e decisão de falar não são a mesma coisa. Uma pessoa pode saber bastante e ainda evitar a interação.
 
-Outra dimensão é o ritmo da frase.
+Por isso coragem também faz parte da aprendizagem.
 
-O inglês costuma ser descrito como uma língua stress-timed em contraste com línguas mais syllable-timed, embora a realidade fonética seja mais complexa do que rótulos simples. Pedagogicamente, porém, existe uma percepção útil: algumas sílabas recebem destaque, enquanto outras são reduzidas.
+Não uma coragem cinematográfica, como atravessar Mordor carregando o anel em The Lord of the Rings.
 
-Brasileiros frequentemente pronunciam todas as palavras com força semelhante.
+Uma coragem muito menor e, por isso mesmo, muito mais frequente.
 
-Isso pode produzir fala clara palavra por palavra, mas pouco natural em sequência.
+Perguntar mesmo sem saber se a frase está perfeita.
 
-Observe:
+Responder sem ensaiar dez vezes mentalmente.
 
-“I WANT to GO to the STORE.”
+Continuar falando depois de perceber um erro.
 
-Palavras de conteúdo carregam mais destaque. Palavras funcionais muitas vezes ficam reduzidas.
+Pedir para alguém repetir.
 
-Esse padrão ajuda a compreensão e a produção.
+Rir da própria confusão e tentar novamente.
 
-É por isso que listening e pronúncia são inseparáveis.
+Cada vez que você faz isso, ensina ao cérebro uma coisa importante:
 
-Você só consegue imitar aquilo que consegue perceber.
+“Eu consigo sobreviver ao erro.”
 
-E aprende a perceber melhor quando entende o que procurar.
+E depois de algum tempo, aquilo que parecia exposição começa a parecer comunicação.
 
-Uma excelente prática é o shadowing.
+Fluência também nasce dessa liberdade.`
+  },
+  {
+    id: "reflexao-43",
+    title: "Reflexão 43",
+    label: "Uma língua só faz sentido quando existe alguém do outro lado",
+    text: `É possível estudar inglês sozinho.
 
-Escolha uma frase curta de áudio claro.
+Eu sou prova disso.
 
-Ouça várias vezes.
+Mas ninguém aprende uma língua para permanecer eternamente sozinho dentro dela.
 
-Depois repita tentando acompanhar ritmo e entonação, não apenas sons individuais.
+Uma língua pressupõe encontro.
 
-Grave sua voz.
+Mesmo quando você lê um livro, existe alguém do outro lado das palavras. Quando assiste a um filme, alguém escreveu aquelas falas. Quando ouve uma música, existe uma voz tentando alcançar outra pessoa.
 
-Compare.
+A linguagem é uma ponte.
 
-O objetivo não é virar cópia da pessoa.
+E uma ponte que não liga dois lugares não tem muita utilidade.
 
-É expandir sua flexibilidade articulatória e prosódica.
+Foi somente com o tempo que percebi que aprender inglês sozinho nunca significou aprender inglês isolado do mundo. Meus professores estavam espalhados por toda parte: filmes, músicas, livros, dicionários, erros, conversas, entrevistas, textos e inúmeras tentativas de compreender aquilo que inicialmente parecia rápido demais.
 
-No início, você pode sentir que está atuando.
+Eu estudava sozinho, mas estava constantemente encontrando outras pessoas através da língua.
 
-Ótimo.
+Isso muda nossa compreensão sobre falar inglês.
 
-Atores fazem algo parecido: experimentam ritmo, entonação e posicionamento vocal até que determinada forma se torne acessível.
+Uma conversa não é uma apresentação de competência.
 
-Pense em O Terminal, no qual o personagem de Tom Hanks precisa navegar um ambiente linguístico novo. O filme exagera e simplifica várias coisas, mas captura uma realidade importante: comunicação envolve som, contexto, repetição, gesto e tentativa. Nem tudo precisa estar perfeito para funcionar.
+É uma construção compartilhada de significado.
 
-Outra técnica útil é trabalhar com pares mínimos.
+Na interação real, pessoas repetem, reformulam, perguntam, interrompem, hesitam e esclarecem. Pesquisas sobre interação na aquisição de segunda língua mostram justamente a importância desses processos de negociação de significado.
 
-“Ship / sheep.”
+Quando você diz Sorry, could you say that again?, a conversa não fracassou.
 
-“Full / fool.”
+A conversa está funcionando.
 
-“Hat / hot.”
+Quando alguém reformula uma pergunta para que você compreenda, isso não demonstra sua incompetência.
 
-“Three / tree.”
+Demonstra cooperação.
 
-Ouça a diferença.
+Pense em Cast Away. O personagem de Tom Hanks cria Wilson porque o ser humano possui uma necessidade quase visceral de dirigir a palavra a alguém.
 
-Identifique.
+Falar existe porque existe um outro.
 
-Depois produza.
+Talvez, então, a pergunta mais produtiva deixe de ser:
 
-O treino precisa seguir as duas direções.
+“Meu inglês está correto?”
 
-Se você não percebe a diferença, terá dificuldade para controlar a produção.
+E passe a ser:
 
-Se percebe mas não consegue produzir, o problema é mais motor.
+“A outra pessoa conseguiu compreender o que eu queria dizer?”
 
-Separar as duas coisas ajuda.
+A primeira pergunta transforma a conversa em prova.
 
-Também vale usar espelho em alguns sons.
+A segunda transforma a conversa em encontro.
 
-O “th” de “think”, por exemplo, envolve posição da língua que não é comum no português brasileiro. Visualizar pode ajudar.
+E idiomas foram inventados para encontros.`
+  },
+  {
+    id: "reflexao-44",
+    title: "Reflexão 44",
+    label: "O inglês começa a mudar quando deixa de ser matéria e vira vida",
+    text: `Em algum momento da jornada, algo precisa acontecer com o inglês.
 
-Mas não transforme a pronúncia em anatomia obsessiva.
+Ele precisa sair do caderno.
 
-O som precisa voltar rapidamente para palavras e frases.
+Enquanto o idioma existir apenas como conteúdo — simple past, phrasal verbs, listas de vocabulário, exercícios, regras — ele continuará pertencendo parcialmente ao território da escola.
 
-Treine “think”.
+Tudo isso é importante.
 
-Depois “I think so.”
+Mas é preparação.
 
-Depois “I think we should change the plan.”
+A vida começa quando você precisa usar aquilo para alguma coisa.
 
-O objetivo é integrar.
+Contar uma história.
 
-Outro fenômeno importante é linking.
+Entender uma piada.
 
-Na fala contínua, palavras não ficam separadas por pequenos espaços como na página.
+Discordar educadamente.
 
-“Pick it up” pode soar como uma sequência muito mais conectada do que o aprendiz espera.
+Explicar seu trabalho.
 
-Consoantes se ligam a vogais seguintes.
+Conhecer alguém.
 
-Sons podem sofrer assimilação.
+Pedir ajuda.
 
-Alguns desaparecem.
+Assistir a um filme sem depender tanto das legendas.
 
-Essa conectividade explica por que uma frase conhecida no papel parece desconhecida no áudio.
+Ler algo porque o assunto interessa a você, não porque alguém determinou a página.
 
-Treinar pronúncia conectada melhora também listening.
+Foi assim também na minha experiência aprendendo inglês sozinho. O idioma começou a ganhar força quando deixou de ser exclusivamente um objeto que eu estudava e passou a acompanhar coisas que eu já queria fazer.
 
-Você começa a reconhecer formas que antes pareciam deformadas.
+Essa mudança parece pequena, mas é enorme.
 
-A fala rápida deixa de ser um truque.
+Porque o cérebro deixa de perguntar apenas “o que significa esta palavra?” e começa a perguntar “o que esta pessoa está tentando me dizer?”.
 
-Você descobre suas regras de redução.
+O foco migra da língua para o significado.
 
-Entonação também importa.
+E é exatamente aí que a língua começa a cumprir sua função.
 
-Uma pergunta pode subir ou cair.
+A aprendizagem de uma segunda língua não acontece somente pela acumulação de informações sobre o idioma. Ela depende de exposição, interação, produção, atenção e uso significativo ao longo do tempo.
 
-Uma palavra pode receber destaque para marcar contraste.
+É como aprender a tocar piano.
 
-“YOU did it?”
+Conhecer o nome das notas não é tocar música.
 
-“You DID it?”
+No início deste livro, construímos o inglês como um prédio: palavras eram tijolos, estruturas ajudavam a sustentar paredes e a prática mantinha a construção avançando.
 
-“You did IT?”
+Mas ninguém constrói uma casa apenas para admirar os tijolos.
 
-O conteúdo lexical quase não muda, mas o foco muda.
+Chega uma hora em que você precisa morar nela.
 
-Isso é linguagem.
+Com o inglês acontece o mesmo.
 
-Pronúncia não é acabamento decorativo.
+Converse.
 
-Ela carrega significado pragmático.
+Leia.
 
-Por isso, imitar cenas de filmes pode ser útil se você observar intenção.
+Escute.
 
-Pegue uma fala conhecida de O Poderoso Chefão, por exemplo. A força da frase não está apenas nas palavras. Está no ritmo, na pausa, na voz e no contexto. Se você lesse o texto com entonação completamente diferente, mudaria a experiência.
+Escreva.
 
-No inglês cotidiano acontece a mesma coisa em escala menor.
+Brinque.
 
-“Really?” pode expressar surpresa, dúvida, irritação, entusiasmo ou ironia.
+Descubra.
 
-A palavra é a mesma.
+Erre.
 
-A melodia muda.
+Volte.
 
-Outra questão é velocidade.
+Tente novamente.
 
-Muitos alunos tentam falar rápido para parecer fluentes.
+Faça alguma coisa acontecer através dessa língua.
 
-Isso costuma piorar pronúncia.
+Porque o grande objetivo nunca foi simplesmente saber inglês.
 
-Fluência não é velocidade máxima.
+É conseguir viver experiências que, sem ele, talvez nunca chegassem até você.
 
-É continuidade eficiente.
+É quando o inglês deixa de ser matéria.
 
-Um falante claro e moderadamente lento pode soar muito mais competente do que alguém acelerado e difícil de entender.
+E começa a ser parte da sua vida.`
+  }
+];
 
-Construa clareza primeiro.
-
-Velocidade cresce com automaticidade.
-
-Não force.
-
-É como dirigir.
-
-Ninguém aprende controle do carro começando a cento e vinte quilômetros por hora.
-
-Outra armadilha é corrigir tudo ao mesmo tempo.
-
-Você tenta monitorar “th”, vogais, plural, ritmo, entonação, linking e gramática enquanto conversa.
-
-Resultado: silêncio.
-
-Escolha foco.
-
-Durante uma semana, observe terminação de passado.
-
-Depois trabalhe sílaba tônica.
-
-Depois um contraste vocálico.
-
-A atenção consciente é limitada.
-
-Melhor atacar um alvo por vez e depois integrar.
-
-Essa lógica se aproxima da prática deliberada: identificar um aspecto específico, receber feedback e repetir com ajuste.
-
-Anders Ericsson popularizou o conceito de deliberate practice em estudos sobre expertise. Embora aprender língua não seja idêntico a treinar xadrez ou violino, o princípio de prática focalizada com feedback é extremamente útil.
-
-Não diga apenas:
-
-“Preciso melhorar minha pronúncia.”
-
-Pergunte:
-
-“Qual aspecto está reduzindo minha inteligibilidade?”
-
-Talvez seja stress.
-
-Talvez seja uma vogal.
-
-Talvez seja final de palavra.
-
-Talvez seja ritmo.
-
-Diagnóstico cria treino.
-
-Também escute sua própria voz.
-
-Gravação é desconfortável no início, mas poderosa.
-
-Quando falamos, ouvimos parte da nossa voz por condução óssea, então a gravação parece diferente. Depois do estranhamento inicial, ela vira ferramenta.
-
-Compare sua fala com o modelo.
-
-Não procure “sotaque feio”.
-
-Procure diferenças específicas.
-
-Onde a palavra ficou difícil?
-
-Onde a sílaba tônica mudou?
-
-Onde você adicionou uma vogal?
-
-Brasileiros frequentemente inserem vogais em finais consonantais, transformando “work” em algo próximo de “worki”, por exemplo. Isso pode ou não prejudicar compreensão dependendo do contexto, mas perceber o padrão permite escolher.
-
-Consciência produz controle.
-
-Outro ponto importante é não esconder a voz por vergonha.
-
-A boca aprende falando.
-
-Se você pratica pronúncia apenas mentalmente, treina percepção, não articulação suficiente.
-
-Fale em voz alta.
-
-Mesmo sozinho.
-
-Leia frases.
-
-Repita trechos.
-
-Descreva objetos.
-
-Grave mensagens.
-
-Seu aparelho fonador precisa de horas de experiência.
-
-Atletas repetem movimentos.
-
-Músicos repetem escalas.
-
-Falantes também precisam repetir sequências.
-
-Mas repita com significado.
-
-Não passe meia hora dizendo uma sílaba sem nunca usá-la numa frase.
-
-A língua serve à comunicação.
-
-Outra questão delicada é identidade.
-
-Alguns estudantes têm medo de “fingir” quando tentam uma pronúncia mais próxima do inglês.
-
-Sentem vergonha de mudar entonação.
-
-Parece teatral.
-
-Isso acontece porque nossa voz está profundamente ligada à identidade.
-
-Mas aprender novos movimentos sonoros não é falsidade.
-
-É adaptação comunicativa.
-
-Você não deixa de ser brasileiro por produzir uma vogal diferente.
-
-Da mesma forma que um ator aprende uma nova postura sem perder quem é, você aprende possibilidades articulatórias.
-
-Seu sotaque pode continuar carregando marcas da sua história.
-
-Tudo bem.
-
-O objetivo não é desaparecer dentro da língua.
-
-É conseguir habitar nela.
-
-Pesquisas sobre identidade em aquisição de segunda língua, como trabalhos de Bonny Norton, mostram como investimento, pertencimento e relações de poder se conectam ao uso da língua. Pronúncia também toca esses temas porque voz é social.
-
-Quem você sente que tem permissão para ser quando fala inglês?
-
-Essa pergunta é mais profunda do que parece.
-
-Permita-se experimentar.
-
-Não ridicularize sua própria tentativa antes que outra pessoa tenha chance de entendê-la.
-
-Humor pode aliviar tensão, mas autodepreciação constante cria bloqueio.
-
-Você não precisa pedir desculpas por estar aprendendo.
-
-Pratique.
-
-Ajuste.
-
-Continue.
-
-E lembre-se de que inteligibilidade é relação, não propriedade isolada. Comunicação depende também do ouvinte, do contexto, do ruído, da familiaridade entre sotaques e das expectativas. Não carregue sozinho a responsabilidade por toda falha de compreensão.
-
-Ao mesmo tempo, use feedback.
-
-Se pessoas frequentemente pedem repetição da mesma palavra, investigue.
-
-Se um som cria confusão recorrente, trabalhe.
-
-Esse é o tipo de dado que vale ouro.
-
-No fim, uma boa pronúncia não precisa transformar você em dublê vocal de Hollywood.
-
-Precisa permitir que suas ideias atravessem o ar e cheguem ao outro lado.
-
-Esse é o objetivo.
-
-Palavras são tijolos.
-
-Gramática organiza estrutura.
-
-Pronúncia é a forma sonora pela qual esse prédio se torna visível aos ouvidos.
-
-Se a porta está difícil de abrir, ajustamos a dobradiça.
-
-Não demolimos a casa inteira.
-
-Trabalhe nos pontos que importam.
-
-Fale com clareza.
-
-Ouça com atenção.
-
-Imite sem vergonha.
-
-Grave.
-
-Compare.
-
-Corrija.
-
-E preserve sua voz.
-
-Você não precisa soar como outra pessoa para ser compreendido.
-
-Precisa apenas construir uma versão do inglês em que sua voz consiga circular.`
-});
+window.BOOK_CONTENT.push(...chapterNineReflections);
