@@ -25,6 +25,8 @@ KRASHEN, Stephen D. (1982). Principles and Practice in Second Language Acquisiti
 
 4. Alison Wray — linguagem formulaica e chunks. Reflexão 16.
 
+WRAY, Alison. Formulaic language and the lexicon. Cambridge: Cambridge University Press, 2002.
+
 5. Phillippa Lally e colaboradores — formação de hábitos e automaticidade. Reflexão 21.
 
 6. Barry Zimmerman — aprendizagem autorregulada. Reflexão 23.
