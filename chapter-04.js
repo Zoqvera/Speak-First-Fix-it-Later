@@ -1,537 +1,322 @@
 window.BOOK_CONTENT = Array.isArray(window.BOOK_CONTENT) ? window.BOOK_CONTENT : [];
-window.BOOK_CONTENT.push({
-  id: "capitulo-4",
-  title: "Capítulo 4",
-  label: "Palavras são tijolos, mas paredes precisam de encaixe",
-  text: `Se aprender inglês é construir um prédio, o vocabulário é o material que permite à obra sair do desenho e ocupar espaço.
 
-Essa metáfora merece ser levada a sério.
+const chapterFourReflections = [
+  {
+    id: "reflexao-15",
+    title: "Reflexão 15",
+    label: "Palavras são tijolos",
+    text: `Você pode conhecer todas as regras de uma construção e, ainda assim, não conseguir levantar uma parede se não houver tijolos.
 
-Você pode ter um projeto impecável. Pode conhecer regras. Pode compreender explicações gramaticais. Pode saber onde cada peça teoricamente deveria estar. Mas, se faltam palavras, a comunicação trava porque não há matéria suficiente para construir o que você deseja dizer.
+Com o inglês acontece algo parecido.
 
-É por isso que estudantes com boa noção de gramática às vezes se sentem frustrados ao conversar. Eles reconhecem estruturas, sabem identificar tempos verbais e talvez até expliquem por que determinada frase está correta. No entanto, quando precisam falar sobre um tema real, faltam substantivos, verbos, adjetivos, expressões e combinações prontas.
+Há estudantes capazes de explicar o present perfect, reconhecer uma oração condicional e identificar um verbo irregular, mas que ficam paralisados quando alguém faz uma pergunta simples. Não necessariamente porque lhes falte gramática. Às vezes, faltam palavras.
 
-A sensação é curiosa: a pessoa sabe como a frase deveria funcionar, mas não possui os elementos para preenchê-la.
+Vocabulário é matéria-prima da comunicação.
 
-É como conhecer engenharia e chegar ao canteiro sem material.
+Mas existe uma diferença importante entre possuir tijolos e construir uma casa. Durante muito tempo, aprender vocabulário significou decorar equivalências:
 
-Por isso, ampliar vocabulário não é uma atividade periférica. É parte central da competência linguística.
+book significa livro.
 
-Mas existe um problema.
+chair significa cadeira.
 
-Durante muito tempo, estudar vocabulário foi quase sinônimo de decorar listas.
+window significa janela.
 
-book — livro.
+Isso ajuda, mas é apenas o começo.
 
-chair — cadeira.
+Conhecer uma palavra não significa conseguir traduzi-la. Significa encontrá-la numa conversa e reconhecê-la; ouvi-la sem precisar vê-la escrita; pronunciá-la; saber onde costuma aparecer; entender que significados assume em contextos diferentes; e, principalmente, conseguir recuperá-la quando você precisa dela.
 
-window — janela.
+Pense em run. Talvez sua primeira associação seja “correr”. Mas alguém pode run a company, run a program, run out of time ou run into an old friend.
 
-street — rua.
+A tradução é apenas uma fotografia da palavra. A língua real é o filme inteiro.
 
-A lista tem utilidade. Ela oferece uma primeira associação. O erro é acreditar que aprender uma palavra termina quando conseguimos dar uma tradução.
+Essa diferença explica uma frase que todo professor de inglês já ouviu:
 
-Uma palavra é muito maior do que sua tradução.
+“Eu conheço todas as palavras, mas não entendi a frase.”
 
-Conhecer uma palavra envolve, em diferentes graus, reconhecer sua forma escrita, seu som, seus significados, os contextos em que aparece, as palavras que costumam acompanhá-la, suas restrições gramaticais e a maneira como ela se comporta na comunicação real.
+Talvez o problema seja justamente esse: as palavras foram aprendidas como objetos independentes.
 
-Pegue uma palavra simples como “run”.
+Só que palavras não vivem sozinhas.
 
-Ela pode significar correr.
+Elas possuem hábitos, amizades, vizinhos e lugares onde gostam de aparecer.
 
-Mas também aparece em “run a company”, “run a program”, “run out of time”, “run into someone”.
+O primeiro grande salto no aprendizado de vocabulário ocorre quando você deixa de perguntar apenas:
 
-Se você guardar apenas “run = correr”, possui uma fotografia muito pequena de um objeto muito maior.
+“O que essa palavra significa?”
 
-Isso explica por que estudantes frequentemente dizem:
+E começa a perguntar:
 
-“Eu conheço todas as palavras dessa frase, mas não entendi o que ela significa.”
+“Como essa palavra vive?”
 
-Talvez conheçam as palavras separadamente, mas não conheçam a combinação.
+É nesse momento que você deixa de colecionar tijolos.
 
-A linguagem humana adora combinações.
+E começa, finalmente, a construir.`
+  },
+  {
+    id: "reflexao-16",
+    title: "Reflexão 16",
+    label: "Palavras têm vizinhos",
+    text: `Imagine que alguém lhe entregue milhares de peças de LEGO completamente separadas e peça que você construa alguma coisa rapidamente.
 
-Palavras vivem em vizinhanças.
+Você provavelmente conseguiria.
 
-Algumas aparecem juntas com tanta frequência que começam a formar blocos reconhecíveis. A linguística de corpus e estudos sobre fraseologia mostraram de maneira muito clara que o uso real da língua é repleto de padrões recorrentes, collocations, chunks e sequências formulaicas.
+Mas demoraria.
 
-Pesquisadores como Alison Wray discutem a importância da linguagem formulaica. Michael Lewis, no campo pedagógico, ajudou a popularizar o chamado Lexical Approach, que enfatiza o papel de unidades lexicais e combinações em vez de tratar a língua apenas como gramática preenchida por palavras isoladas.
+Agora imagine que algumas partes já viessem encaixadas: uma roda com seu eixo, uma porta com sua moldura, uma pequena estrutura pronta.
 
-Na prática, isso significa que aprender “decision” é bom.
+Sua construção se tornaria muito mais rápida.
 
-Aprender “make a decision” é melhor.
+A fluência funciona de maneira semelhante.
 
-Aprender “attention” é bom.
+Falantes não produzem necessariamente cada frase combinando palavra por palavra como se estivessem resolvendo uma equação. Boa parte da língua aparece em combinações relativamente recorrentes.
 
-Aprender “pay attention” é melhor.
+Por isso dizemos make a decision, pay attention, take a shower, ask for advice e responsible for.
 
-Aprender “responsible” é útil.
+Esses agrupamentos são frequentemente estudados como collocations, chunks ou sequências formulaicas. Pesquisas sobre linguagem formulaica, associadas a estudiosos como Alison Wray, mostram a importância dessas unidades recorrentes no processamento e na produção linguística.
 
-Aprender “responsible for” evita um erro futuro.
+Isso muda uma coisa fundamental na maneira de estudar inglês.
 
-Você não está apenas armazenando tijolos.
+Não aprenda apenas decision.
 
-Está armazenando pequenos módulos já encaixados.
+Aprenda make a decision.
 
-Isso acelera a produção porque reduz a quantidade de decisões que precisam ser tomadas em tempo real.
+Não registre somente advice.
 
-Pense em LEGO.
+Registre give advice, ask for advice, a piece of advice.
 
-Se você precisar montar cada objeto a partir da menor peça possível, tudo demora mais. Quando algumas partes já vêm montadas, a construção ganha velocidade.
+Você está ensinando ao cérebro não apenas o significado da palavra, mas seu comportamento.
 
-A fluência tem muito disso.
+Isso é particularmente importante quando aprendemos uma segunda língua, porque o cérebro naturalmente tenta utilizar os padrões que já conhece. Estudos sobre transferência linguística mostram que a primeira língua pode tanto ajudar quanto interferir na construção da segunda.
 
-Falantes não calculam cada frase do zero. Eles reutilizam padrões, sequências e construções familiares.
+O português não é seu inimigo.
 
-Por isso, ao encontrar uma palavra nova, pergunte:
+Ele é o mapa que você já possui.
 
-Com o que ela costuma aparecer?
+O problema aparece quando o território muda e você continua seguindo exatamente o mesmo mapa.
 
-Qual preposição vem depois?
+Quanto mais você encontra as combinações naturais do inglês, menos precisa calculá-las.
 
-Que verbo combina com ela?
+Depois de ouvir uma música muitas vezes, você quase consegue prever o próximo acorde.
 
-Existe uma expressão frequente?
+Com a língua acontece algo parecido.
 
-Que frase real eu poderia guardar inteira?
+A fluência começa quando determinadas combinações deixam de parecer decisões.
 
-Essa mudança aparentemente pequena transforma sua aprendizagem.
+E começam a parecer caminhos conhecidos.`
+  },
+  {
+    id: "reflexao-17",
+    title: "Reflexão 17",
+    label: "Aprenda as palavras da sua vida",
+    text: `Você nunca aprenderá todas as palavras da língua inglesa.
 
-Em vez de estudar “advice”, por exemplo, você pode guardar “give someone advice”, “ask for advice”, “a piece of advice”.
+E isso não deveria ser um problema.
 
-Além de significado, você aprende comportamento.
+Falantes nativos também não conhecem todas.
 
-E palavras possuem comportamento.
+O inglês contém um universo lexical tão grande que estudar cada palavra com a mesma prioridade seria como entrar em um supermercado e decidir comprar tudo porque talvez algum produto seja útil um dia.
 
-Essa ideia é especialmente importante para brasileiros porque muitas escolhas que parecem lógicas em português não funcionam da mesma maneira em inglês.
+Aprender bem também significa escolher.
 
-Em português, fazemos uma foto.
+Pesquisas sobre frequência lexical, incluindo trabalhos importantes na área de aquisição de vocabulário em segunda língua, mostram que palavras de alta frequência oferecem enorme retorno ao aprendiz. Certos itens aparecem constantemente em conversas, textos, filmes, reuniões e situações cotidianas.
 
-Em inglês, normalmente “take a photo”.
+Por isso, dominar palavras frequentes importa.
 
-Em português, temos uma decisão.
+Mas existe outra frequência que nenhum dicionário consegue calcular perfeitamente:
 
-Em inglês, “make a decision”.
+a frequência da sua vida.
 
-Em português, dependemos de algo.
+Um médico encontra um inglês diferente do encontrado por um engenheiro. Um professor precisa de expressões que talvez sejam irrelevantes para um turista. Uma pessoa que participa de reuniões internacionais necessita de vocabulário diferente de alguém que está aprendendo inglês para viajar.
 
-Em inglês, “depend on”.
+Seu vocabulário precisa conversar com sua biografia.
 
-Quando você aprende apenas a tradução isolada, deixa essas informações para serem descobertas no pior momento possível: durante a fala.
+Quando aprendi inglês sozinho, grande parte das palavras que adquiri não veio de listas perfeitamente planejadas. Elas apareciam nos lugares que eu frequentava: músicas, filmes, textos e materiais que despertavam minha curiosidade.
 
-Aí o cérebro precisa improvisar.
+Foi uma jornada cheia de erros, lacunas e descobertas.
 
-E improvisa usando padrões do português.
+Mas havia uma vantagem poderosa:
 
-Isso é natural.
+eu queria entender.
 
-A influência da língua materna faz parte da aprendizagem de segunda língua. Estudos sobre transferência linguística mostram que conhecimentos prévios podem tanto ajudar quanto interferir. Às vezes português e inglês oferecem estruturas parecidas. Em outras, o aprendiz projeta um padrão da primeira língua sobre a segunda e produz uma forma não convencional.
+E curiosidade é uma excelente professora de vocabulário.
 
-O objetivo não é demonizar o português.
+Quando uma palavra aparece numa cena que você quer compreender, numa música que não sai da sua cabeça ou numa conversa em que você realmente precisa dizer alguma coisa, ela deixa de ser simplesmente matéria escolar.
 
-Sua língua materna é um recurso poderoso.
+Ela se transforma em chave.
 
-O objetivo é perceber onde as duas línguas deixam de caminhar juntas.
+Existe uma porta diante de você.
 
-Essa percepção cresce com exposição e atenção.
+Você quer abri-la.
 
-Quando você encontra “take a shower” dezenas de vezes, a combinação começa a soar natural. Você deixa de precisar calcular.
+Então aquela palavra passa a importar.
 
-É como ouvir uma música conhecida. Depois de certo número de repetições, o próximo acorde parece esperado.
+Talvez uma das melhores perguntas que você possa fazer ao estudar vocabulário seja:
 
-Esse sentimento de expectativa é parte importante do domínio linguístico.
+“Quais palavras ajudariam o inglês a falar sobre a minha vida?”
 
-Por isso, frequência importa.
+Comece por elas.
 
-Nem todas as palavras merecem a mesma prioridade.
+Porque uma língua se torna muito mais difícil de abandonar quando começa a pertencer a você.`
+  },
+  {
+    id: "reflexao-18",
+    title: "Reflexão 18",
+    label: "Comece a enxergar o código",
+    text: `Em Matrix, Neo passa grande parte da história enxergando aquilo que todos enxergam.
 
-O inglês possui um vocabulário gigantesco. Tentar aprender tudo com a mesma intensidade seria uma estratégia absurda.
+Até que algo muda.
 
-Imagine entrar num supermercado e decidir comprar todos os produtos porque ainda não sabe o que poderá precisar algum dia.
+Ele começa a perceber o código.
 
-Não faz sentido.
+Aprender inglês produz, em escala muito menos cinematográfica, uma experiência semelhante.
 
-Você começa pelo que tem maior probabilidade de usar.
+No início, você encontra palavras.
 
-Pesquisas sobre frequência lexical e cobertura de texto ajudam a mostrar por que palavras frequentes são tão valiosas. Um conjunto relativamente pequeno de itens de alta frequência aparece em uma parcela muito grande do uso cotidiano da língua. À medida que avançamos, cada nova faixa de vocabulário aumenta nossa cobertura e permite lidar com textos e conversas mais diversos.
+Depois começa a encontrar padrões.
 
-Isso não significa que exista um número mágico de palavras depois do qual você acordará fluente.
+Percebe que get parece estar em todos os lugares.
 
-Significa que aprender vocabulário de alta frequência oferece retorno maior no início.
+Descobre que take participa de dezenas de combinações.
 
-Se você ainda não domina “need”, “want”, “think”, “know”, “work”, “time”, “people” e centenas de itens extremamente frequentes, estudar nomes raros de ferramentas medievais provavelmente não deveria ser sua prioridade — a menos que sua profissão envolva um número preocupante de castelos.
+Nota que actually pode enganar quem imediatamente pensa em “atualmente”.
 
-Ao mesmo tempo, frequência geral não é tudo.
+Percebe que eventually não corresponde simplesmente ao nosso “eventualmente”.
 
-Existe frequência pessoal.
+A língua começa a revelar sua arquitetura.
 
-Um engenheiro usa palavras diferentes de um médico.
+Nesse ponto, vocabulário deixa de parecer uma enorme coleção aleatória.
 
-Um professor encontra vocabulário diferente de um comissário de bordo.
+Você começa a enxergar relações.
 
-Quem trabalha com finanças precisa de itens que talvez quase nunca apareçam numa conversa turística.
+Employ se conecta a employee, employer, employment e unemployment.
 
-Por isso, seu vocabulário deve ter duas camadas.
+Decide conduz a decision, decisive e indecisive.
 
-Uma base geral de alta frequência.
+Prefixos e sufixos começam a funcionar como pistas.
 
-E uma camada específica ligada à sua vida.
+Contrastes também ajudam:
 
-Essa segunda camada costuma ser extremamente motivadora porque produz utilidade imediata.
+make e do.
 
-Se você participa de reuniões, aprenda expressões para concordar, discordar, pedir esclarecimento, apresentar dados e interromper educadamente.
+say e tell.
 
-Se viaja, aprenda linguagem de aeroporto, hotel, restaurante, transporte e emergência.
+job e work.
 
-Se lê artigos acadêmicos, observe conectores, verbos de posicionamento e vocabulário recorrente da sua área.
+remember e remind.
 
-O idioma começa a servir você.
+Aprender uma língua não exige apenas armazenar diferenças. Exige enxergá-las.
 
-Isso muda a relação com o estudo.
+Quanto mais essas redes se formam, menos cada palavra parece uma ilha.
 
-Quando aprendi inglês sozinho, eu não tinha acesso constante a listas cuidadosamente calibradas por frequência. Muitas palavras entraram na minha vida porque estavam nos lugares que eu frequentava: músicas, filmes, textos, materiais. Esse caminho não era perfeitamente eficiente, mas possuía uma vantagem enorme: relevância.
+E há uma consequência importante nisso: você começa a aprender coisas novas utilizando aquilo que já conhece.
 
-As palavras apareciam ligadas a alguma coisa que eu queria entender.
+Uma palavra ilumina outra.
 
-Curiosidade é uma excelente curadora de vocabulário.
+Uma estrutura explica outra.
 
-Quando você deseja genuinamente descobrir o significado de uma frase, a palavra deixa de ser uma obrigação e se torna uma chave.
+Um padrão reaparece em lugares diferentes.
 
-Você quer abrir uma porta.
+É exatamente por isso que uma frase inteira pode ensinar mais do que uma tradução isolada.
 
-A chave importa.
+I’m looking forward to seeing you.
 
-Isso também ajuda a explicar por que palavras aprendidas em situações marcantes podem permanecer com tanta força.
+Ali existem palavras, preposição, estrutura e padrão de uso reunidos.
 
-Uma fala de filme.
+Depois você percebe que pode dizer:
 
-Uma música que você ouviu cem vezes.
+I’m looking forward to traveling.
 
-Uma conversa em que precisou desesperadamente dizer alguma coisa.
+I’m looking forward to meeting the team.
 
-Uma palavra que alguém corrigiu num momento constrangedor.
+O bloco não é uma prisão.
 
-Contexto cria memória.
+É uma peça reutilizável.
 
-Em Matrix, Neo começa a enxergar o código por trás do mundo. Para o aprendiz de inglês, algo parecido acontece quando as palavras deixam de ser apenas itens isolados e começam a revelar padrões.
+Aprender inglês começa com tijolos.
 
-Você percebe que “get” aparece em todo lugar.
+Mas chega um momento em que você percebe algo maior.
 
-Que “take” participa de dezenas de combinações.
+Existem paredes, corredores, portas e estruturas inteiras surgindo diante de você.
 
-Que “actually” não significa exatamente aquilo que um brasileiro pode supor ao olhar pela primeira vez.
+Você começou a enxergar o prédio.`
+  },
+  {
+    id: "reflexao-19",
+    title: "Reflexão 19",
+    label: "Uma palavra só é sua quando você consegue encontrá-la",
+    text: `Existe uma diferença enorme entre reconhecer alguma coisa e conseguir recuperá-la.
 
-Que “eventually” não é “eventualmente” no sentido mais comum do português.
+Você olha para uma palavra e pensa:
 
-Você começa a enxergar o código.
+“Eu sabia isso.”
 
-Esse momento é importante porque o vocabulário deixa de ser uma coleção e vira sistema.
+Talvez soubesse.
 
-Uma boa estratégia é construir famílias e redes.
+Mas não conseguiu encontrá-la quando precisava.
 
-Se aprende “employ”, pode encontrar “employee”, “employer”, “employment”, “unemployment”.
+O vocabulário que realmente transforma sua comunicação não é apenas aquele que você viu. É aquele que seu cérebro consegue localizar.
 
-Se aprende “decide”, encontra “decision”, “decisive”, “indecisive”.
+Por isso, encontrar cinquenta palavras novas em um dia não significa aprender cinquenta palavras.
 
-A morfologia oferece atalhos.
-
-Prefixos e sufixos ajudam a reconhecer relações.
-
-Isso não elimina a necessidade de exposição, mas torna a língua menos arbitrária.
-
-Você percebe peças que se repetem.
-
-Outra estratégia é aprender pelo contraste.
-
-“Say” e “tell”.
-
-“Make” e “do”.
-
-“Job” e “work”.
-
-“Fun” e “funny”.
-
-“Remember” e “remind”.
-
-Esses pares costumam gerar erro porque os significados se aproximam, mas o comportamento é diferente.
-
-Colocá-los lado a lado ajuda a construir fronteiras.
-
-A memória não precisa apenas armazenar itens.
-
-Precisa distinguir.
-
-Também vale aprender exemplos completos.
-
-Uma frase pode carregar várias informações de uma vez.
-
-“I’m looking forward to seeing you.”
-
-Nessa única sequência, você aprende uma expressão, uma preposição e uma forma verbal que muitos estudantes erram.
-
-Se memorizar apenas “look forward = esperar ansiosamente”, ainda terá de reconstruir todo o restante depois.
-
-Guardar frases úteis reduz esse trabalho.
-
-Mas cuidado com outro extremo: colecionar frases sem compreendê-las.
-
-Você não quer ser um papagaio sofisticado.
-
-O objetivo é reconhecer padrões que possam ser adaptados.
-
-Se sabe “I’m looking forward to seeing you”, pode criar:
-
-“I’m looking forward to meeting the team.”
-
-“I’m looking forward to traveling.”
-
-“I’m looking forward to the conference.”
-
-Você extrai a estrutura e reutiliza.
-
-Essa capacidade de recombinação é fundamental.
-
-Tijolos e blocos precisam ser móveis.
-
-Outro ponto importante é pronúncia.
-
-Não considere uma palavra aprendida apenas porque reconhece sua forma escrita.
-
-Inglês possui relações entre ortografia e som menos transparentes do que o português em muitos casos. Você pode conhecer perfeitamente uma palavra no papel e não reconhecê-la quando alguém fala.
-
-Isso acontece muito.
-
-O aluno lê “comfortable” dezenas de vezes, mas nunca prestou atenção em como a palavra é reduzida na fala real. Quando escuta, pensa que é outra palavra.
-
-Por isso, sempre que possível, aprenda vocabulário com som.
-
-Ouça.
-
-Repita.
-
-Observe sílaba tônica.
-
-Perceba reduções.
-
-Compare sua produção.
-
-A palavra precisa existir também no ouvido.
-
-E precisa existir na boca.
-
-Essa conexão entre forma escrita, som e significado aumenta sua flexibilidade.
-
-Outra prática útil é escrever frases verdadeiras.
-
-Não escreva sempre exemplos genéricos.
-
-Em vez de “John has a meeting tomorrow”, escreva algo sobre você.
-
-“I have a meeting at nine tomorrow.”
-
-A palavra entra na sua biografia.
-
-Isso aumenta relevância e cria associações autobiográficas.
-
-Quando o inglês descreve sua vida, ele deixa de parecer material emprestado.
-
-Passa a pertencer a você.
-
-Também precisamos falar de quantidade.
-
-Alguns estudantes tentam aprender cinquenta palavras por dia.
-
-A matemática é sedutora.
+A matemática parece maravilhosa.
 
 Cinquenta por dia.
 
 Mil e quinhentas por mês.
 
-Dezoito mil por ano.
+Dezoito mil em um ano.
 
-Pronto. Shakespeare em doze meses.
+Shakespeare estaria preocupado.
 
-O problema é que a memória não assina contratos feitos em planilhas.
+Mas a memória não obedece às nossas planilhas.
 
-A questão não é quantas palavras você encontrou.
+Pesquisas sobre aprendizagem e memória mostram repetidamente a importância da recuperação ativa e do reencontro distribuído com a informação. Em aquisição de vocabulário, isso significa que rever, tentar lembrar e reencontrar palavras em diferentes contextos tende a ser mais produtivo do que simplesmente acumular material novo.
 
-É quantas consegue reconhecer, recuperar e usar depois.
+Novidade sem revisão cria uma espécie de dívida lexical.
 
-Acumular material novo sem revisar cria dívida.
+Você continua colocando tijolos no terreno, mas não constrói com eles.
 
-E dívida lexical cobra juros.
+Também não considere uma palavra aprendida apenas porque consegue lê-la.
 
-Quanto mais itens entram sem reencontro, mais você sente que está esquecendo tudo.
+Ela precisa existir no ouvido.
 
-Por isso, seu sistema precisa equilibrar novidade e revisão.
+Precisa existir na boca.
 
-Talvez cinco ou dez itens realmente relevantes por dia sejam mais úteis do que cinquenta palavras aleatórias que nunca voltarão.
+Ouça sua pronúncia. Repita. Observe a sílaba tônica. Tente reconhecê-la sem olhar para o texto.
 
-E “item” não precisa significar palavra isolada.
+Depois coloque a palavra dentro da sua própria história.
 
-Pode ser uma expressão.
+Em vez de escrever:
 
-Uma collocation.
+John has a meeting tomorrow.
 
-Uma frase curta.
+escreva:
 
-Uma estrutura.
+I have a meeting tomorrow.
 
-Isso aproxima o estudo do uso real.
+A diferença parece pequena.
 
-Uma ferramenta simples é o caderno de linguagem útil.
+Não é.
 
-Não um caderno onde você copia tudo.
+Agora o inglês está descrevendo você.
 
-Um caderno seletivo.
+Quando aprendi inglês sozinho, precisei descobrir justamente isso: avançar não significava simplesmente encontrar mais conteúdo. Significava voltar, reencontrar, errar, corrigir e tentar usar novamente.
 
-Registre aquilo que deseja usar.
+Aprender uma língua não é encher um depósito.
 
-Escreva a expressão.
+É construir caminhos de acesso.
 
-Um exemplo real.
+Não pergunte apenas:
 
-Uma frase sua.
+“Quantas palavras eu estudei?”
 
-Talvez uma observação de pronúncia.
+Pergunte:
 
-Depois volte e tente recuperar.
+“Quais delas consigo usar quando preciso?”
 
-A seleção é importante.
+Porque possuir milhares de tijolos não significa possuir uma casa.
 
-Seu caderno não precisa ser um cemitério de palavras.
+A construção só existe quando as peças começam a permanecer juntas.`
+  }
+];
 
-Precisa ser uma oficina.
-
-As peças entram para serem usadas.
-
-Outra prática excelente é caçar repetições naturais.
-
-Se uma expressão aparece três vezes em uma semana, preste atenção.
-
-O mundo está fazendo parte da revisão por você.
-
-A frequência espontânea é uma pista de utilidade.
-
-Quando uma palavra insiste em aparecer, talvez ela mereça espaço na sua memória.
-
-Isso vale especialmente para conteúdo relacionado aos seus interesses. Se você acompanha futebol em inglês, certas palavras aparecerão constantemente. Se acompanha tecnologia, outro conjunto surgirá. Se assiste a vídeos de culinária, aprenderá um vocabulário completamente diferente.
-
-É por isso que interesses pessoais são pedagogicamente valiosos.
-
-Eles criam exposição recorrente sem que tudo pareça exercício.
-
-Em Harry Potter, os alunos de Hogwarts aprendem feitiços porque precisam usá-los em situações concretas. Evidentemente, o inglês não permitirá abrir portas dizendo Alohomora, o que é uma pena. Mas existe uma lição útil: conhecimento ganha força quando participa de uma ação.
-
-Não aprenda “recommend” apenas para acertar um flashcard.
-
-Use para recomendar um filme.
-
-Não aprenda “agree” apenas para reconhecer numa lista.
-
-Use para concordar numa conversa.
-
-Não aprenda “probably” apenas para traduzir.
-
-Use para expressar incerteza.
-
-Função dá vida à forma.
-
-E existe um ponto que considero essencial: não espere ter vocabulário suficiente para começar a falar.
-
-Você nunca sentirá que tem palavras suficientes.
-
-Mesmo falantes avançados encontram lacunas.
-
-A competência comunicativa inclui saber contornar essas lacunas.
-
-Não sabe “screwdriver”?
-
-Diga “the tool you use to turn a screw”.
-
-Não sabe “receipt”?
-
-Diga “the paper they give you after you pay”.
-
-Essa capacidade de explicar com outras palavras é chamada de circunlocução e faz parte das estratégias comunicativas.
-
-É uma habilidade valiosa.
-
-Quando falta um tijolo específico, você improvisa com os que possui.
-
-A construção pode não ficar elegante, mas continua de pé.
-
-Esse é o espírito deste livro.
-
-Speak first. Fix it later.
-
-Não porque precisão seja irrelevante.
-
-Mas porque comunicação precisa acontecer para que você descubra onde o sistema ainda precisa crescer.
-
-Cada lacuna encontrada durante a fala é uma pista de vocabulário realmente necessário.
-
-Isso é muito melhor do que decorar listas aleatórias.
-
-A própria vida começa a dizer quais tijolos estão faltando.
-
-Por isso, depois de uma conversa, pergunte:
-
-O que eu quis dizer e não consegui?
-
-Que palavra precisei procurar?
-
-Que expressão faltou?
-
-Que ideia tive de simplificar demais?
-
-Essas respostas formam uma lista de altíssimo valor.
-
-É o vocabulário que sua comunicação está pedindo.
-
-Aprenda esse vocabulário.
-
-Revise.
-
-Use na próxima oportunidade.
-
-A obra avança exatamente onde havia um buraco.
-
-No fim, construir vocabulário não significa empilhar palavras até alcançar um número impressionante.
-
-Significa aumentar suas possibilidades de compreender e dizer coisas.
-
-Cada palavra útil amplia um pouco o espaço disponível.
-
-Cada combinação aprendida reduz esforço.
-
-Cada frase recuperada rapidamente aumenta fluência.
-
-Cada expressão reconhecida no ouvido transforma ruído em significado.
-
-Tijolo por tijolo, a língua deixa de ser um território vazio.
-
-Mas lembre-se: não basta ter material.
-
-É preciso saber onde encaixá-lo.
-
-Palavras são tijolos.
-
-Chunks são pedaços de parede.
-
-Gramática é parte da estrutura.
-
-Pronúncia dá forma sonora.
-
-Uso coloca tudo sob pressão.
-
-E é essa pressão que mostra se o prédio realmente funciona.
-
-A partir de agora, quando encontrar uma palavra nova, não pergunte apenas “o que isso significa?”.
-
-Pergunte também:
-
-“Como isso vive em inglês?”
-
-Essa pergunta transforma vocabulário em linguagem.`
-});
+window.BOOK_CONTENT.push(...chapterFourReflections);
