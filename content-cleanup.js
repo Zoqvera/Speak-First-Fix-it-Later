@@ -59,3 +59,6 @@ if (Array.isArray(window.BOOK_CONTENT)) {
 try {
   localStorage.removeItem("sffil-local-book-content");
 } catch (_) {}
+
+// Load the Chapter 22 reflection replacement synchronously before app.js builds the book.
+document.write('<script src="chapter-22-reflections.js?v=1"><\\/script>');
