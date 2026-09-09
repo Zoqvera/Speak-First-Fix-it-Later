@@ -2,27 +2,6 @@ window.BOOK_CONTENT = Array.isArray(window.BOOK_CONTENT) ? window.BOOK_CONTENT :
 
 const BOOK_PART_DIVIDERS = [
   {
-    id: "parte-2",
-    title: "PARTE II",
-    label: "PERMITA-SE SER RUIM",
-    text: "\u200B",
-    insertAfter: "capitulo-4"
-  },
-  {
-    id: "parte-3",
-    title: "PARTE III",
-    label: "CONSTRUINDO O PRÉDIO",
-    text: "\u200B",
-    insertAfter: "capitulo-8"
-  },
-  {
-    id: "parte-4",
-    title: "PARTE IV",
-    label: "O CÉREBRO QUE APRENDE",
-    text: "\u200B",
-    insertAfter: "capitulo-11"
-  },
-  {
     id: "parte-5",
     title: "PARTE V",
     label: "TRANSFORME INGLÊS EM VIDA",
