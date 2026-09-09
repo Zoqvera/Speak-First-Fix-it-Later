@@ -21,6 +21,8 @@ Acesso pelo DOI: https://doi.org/10.21832/9781847691293-003
 
 3. Stephen Krashen — input compreensível e hipótese do i+1. Reflexões 8, 25, 45, 64 e 111. Também citado na Introdução e no Epílogo.
 
+KRASHEN, Stephen D. (1982). Principles and Practice in Second Language Acquisition. Oxford: Pergamon Press.
+
 4. Alison Wray — linguagem formulaica e chunks. Reflexão 16.
 
 5. Phillippa Lally e colaboradores — formação de hábitos e automaticidade. Reflexão 21.
