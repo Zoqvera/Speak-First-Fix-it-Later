@@ -14,6 +14,11 @@ Acesso pelo DOI: https://doi.org/10.1207/S15327965PLI1104_01
 
 2. Zoltán Dörnyei — motivação em segunda língua e visão do futuro eu em L2. Reflexões 2, 7, 10 e 95.
 
+DÖRNYEI, Zoltán. (2009). The L2 Motivational Self System. In: Dörnyei, Z.; Ushioda, E. (eds.). Motivation, Language Identity and the L2 Self. Bristol: Multilingual Matters, p. 9–42.
+
+DOI: 10.21832/9781847691293-003.
+Acesso pelo DOI: https://doi.org/10.21832/9781847691293-003
+
 3. Stephen Krashen — input compreensível e hipótese do i+1. Reflexões 8, 25, 45, 64 e 111. Também citado na Introdução e no Epílogo.
 
 4. Alison Wray — linguagem formulaica e chunks. Reflexão 16.
