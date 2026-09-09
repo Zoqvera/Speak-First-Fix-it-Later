@@ -135,9 +135,7 @@ Referências culturais, cinematográficas e literárias
 
 22. William Shakespeare — alusão literária geral, sem referência a uma obra específica. Reflexão 19.
 
-23. Hollywood — menção cultural geral. Reflexão 57.
-
-Estas referências são apresentadas como um mapa das menções explícitas feitas ao longo do livro, indicando onde cada autor, conceito, obra, personagem ou referência cultural aparece nas reflexões e, quando aplicável, na Introdução ou no Epílogo.`
+23. Hollywood — menção cultural geral. Reflexão 57.`
 });
 
 (function styleAbntReferences() {
