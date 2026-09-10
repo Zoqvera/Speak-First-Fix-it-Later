@@ -1,46 +1,59 @@
 # Speak First. Fix It Later.
 
-Speak First. Fix It Later. mostra que aprender inglês exige mais do que gramática: é preciso motivação, memória, vocabulário e coragem para errar. Com ciência, humor e estratégias práticas, o livro ensina a transformar erros em progresso e o estudo em uma jornada mais leve, eficiente e possível.
+Livro digital de Flávio de Sousa Freitas sobre aprendizagem de inglês, autonomia, memória, motivação e disposição para errar durante o processo de aquisição da língua.
 
-## Leitor web
+## Site publicado
 
-O repositório agora inclui a primeira versão do leitor digital do livro.
+https://zoqvera.github.io/Speak-First-Fix-it-Later/
 
-### Funcionalidades
+## Estrutura do projeto
 
-- Paginação automática em blocos de 320 palavras.
-- Efeito visual de virada de página.
-- Cronômetro regressivo de 5 minutos em cada página.
-- O cronômetro fica vermelho quando chega a 00:00.
-- Progresso de leitura salvo no navegador.
-- Estado do cronômetro de cada página preservado no navegador.
-- Navegação por botões, teclado e swipe em dispositivos móveis.
-- Sumário lateral.
-- Layout responsivo.
-- Fonte Literata para leitura longa e Inter para a interface.
+O projeto é estático e publicado pelo GitHub Pages a partir da branch `main`.
 
-### Estrutura
+### Arquivos principais
 
-- `index.html` — estrutura do leitor.
-- `styles.css` — identidade visual, responsividade e animações.
-- `app.js` — paginação, navegação, cronômetros e persistência.
-- `book-content.js` — conteúdo do livro.
+- `index.html` — ponto de entrada do leitor e metadados de SEO.
+- `styles.css` — estilos globais e responsividade.
+- `app.js` — núcleo do leitor: paginação, navegação e persistência.
+- `book-content.js` — conteúdo-base do livro.
+- `capa.png` / `capa.webp` — imagens de capa utilizadas pelo leitor e por metadados sociais.
+- `404.html` — página de erro do GitHub Pages.
+- `sitemap.xml` e `robots.txt` — indexação e rastreamento.
 
-### Como adicionar capítulos
+### Conteúdo do livro
 
-Adicione objetos ao array `window.BOOK_CONTENT` em `book-content.js`:
+O conteúdo está distribuído entre arquivos de capítulos e arquivos de substituição/reflexões. A ordem efetiva de carregamento é definida em `index.html`.
 
-```js
-{
-  id: "capitulo-2",
-  title: "Capítulo 2",
-  label: "Título do capítulo",
-  text: `Texto completo do capítulo...`
-}
-```
+Arquivos com nomes como `chapter-XX-reflections.js` substituem ou complementam capítulos anteriores. Arquivos como `introduction-override.js`, `epilogue.js` e `references.js` cuidam das seções editoriais correspondentes.
 
-O leitor faz a paginação automaticamente.
+### Interface e comportamento do leitor
 
-### GitHub Pages
+Os recursos do leitor foram separados em pequenos módulos, entre eles:
 
-O projeto é totalmente estático e está preparado para GitHub Pages. Configure Pages para publicar a branch `main` a partir da pasta raiz (`/`).
+- `cover-page.js` / `cover-page.css` — capa e página de informações da obra.
+- `reader-font-controls.js` / `.css` — ajuste de tamanho da fonte.
+- `reader-transitions.js` / `.css` — efeitos de transição.
+- `edge-page-navigation.js` / `.css` — navegação pelas bordas da página.
+- `global-reading-progress.js` — progresso global de leitura.
+- `page-jump-fix.js` e `page-jump-navigation-fix.js` — navegação direta por número de página.
+- `desktop-page-density.js` e `desktop-total-book-pages.js` — ajustes específicos para desktop.
+- `hide-word-count.js` — remove a contagem de palavras da interface.
+- `analytics-events.js` — eventos enviados ao Google Analytics.
+
+## Páginas de apoio e SEO
+
+Além do leitor principal, o repositório contém páginas orientadas a buscas específicas e materiais em diretórios próprios, como `conteudos/`, `aprender-ingles-sozinho/` e outras páginas temáticas.
+
+## Manutenção
+
+Antes de alterar a ordem dos scripts em `index.html`, consulte `docs/ARCHITECTURE.md`. Alguns módulos funcionam como extensões do núcleo e dependem de serem carregados depois de `app.js`.
+
+Evite renomear arquivos publicados sem atualizar simultaneamente todas as referências em HTML, metadados e páginas de apoio.
+
+## Publicação
+
+O GitHub Pages deve publicar a branch `main` a partir da raiz (`/`). O arquivo `.nojekyll` deve permanecer no repositório.
+
+## Uso da obra
+
+A página editorial do livro informa que a obra pode ser livremente copiada, reproduzida, distribuída, compartilhada e reutilizada, total ou parcialmente, em qualquer mídia ou formato, sem necessidade de autorização prévia do autor.
