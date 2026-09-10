@@ -7,7 +7,7 @@
     if (section?.sectionId === "cover" || section?.id === "cover" || section?.isCover) {
       return `
         <div class="book-cover-page" role="img" aria-label="Capa do livro Speak First. Fix It Later.">
-          <img src="capa.webp" alt="Capa do livro Speak First. Fix It Later." class="book-cover-image" />
+          <img src="Capa3.png?v=1" alt="Capa do livro Speak First. Fix It Later." class="book-cover-image" />
         </div>
       `;
     }
