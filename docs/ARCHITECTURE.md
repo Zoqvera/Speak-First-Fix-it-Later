@@ -52,14 +52,14 @@ Os arquivos abaixo estendem o comportamento do núcleo sem substituir a aplicaç
 - `cover-page.js` / `cover-page.css` — capa e informações editoriais;
 - `reader-font-controls.js` / `.css` — tamanho da fonte;
 - `reader-transitions.js` / `.css` — transições entre páginas;
-- `edge-page-navigation.js` / `.css` — navegação pelas bordas;
+- `edge-page-navigation.css` — áreas visuais de navegação pelas bordas;
+- `reader-enhancements.js` — reúne correções e interações leves do leitor: salto direto para página, proteção contra o teclado móvel, clique nas bordas e remoção da contagem de palavras;
 - `global-reading-progress.js` — cálculo global do progresso;
-- `page-jump-fix.js` — correções do campo de página em dispositivos móveis;
-- `page-jump-navigation-fix.js` — salto direto para uma página;
 - `desktop-page-density.js` — densidade de conteúdo no desktop;
 - `desktop-total-book-pages.js` — ajuste da paginação total em desktop;
-- `hide-word-count.js` — remove a contagem de palavras da interface;
 - `analytics-events.js` — instrumentação do Google Analytics.
+
+Os antigos arquivos `page-jump-fix.js`, `page-jump-navigation-fix.js`, `edge-page-navigation.js` e `hide-word-count.js` foram consolidados em `reader-enhancements.js` para reduzir fragmentação e dependências dispersas.
 
 ## 5. SEO e páginas auxiliares
 
@@ -81,7 +81,8 @@ Antes de remover qualquer imagem histórica ou alternativa, confirme que ela nã
 4. Preservar `.nojekyll`, pois o site é servido diretamente pelo GitHub Pages.
 5. Preferir alterações pequenas e rastreáveis em vez de grandes reestruturações que possam quebrar URLs públicas.
 6. Validar desktop e mobile depois de mudanças em paginação, layout ou tipografia.
+7. Novas correções pequenas de interface devem, quando possível, entrar em `reader-enhancements.js` em vez de gerar novos arquivos isolados.
 
 ## 8. Direção recomendada para refatorações futuras
 
-A raiz ainda concentra muitos arquivos porque o projeto evoluiu incrementalmente. Uma reorganização física em pastas como `assets/`, `css/`, `js/` e `content/` é possível, mas deve ser feita em uma única alteração coordenada, atualizando todos os caminhos no mesmo commit e preservando as URLs públicas das páginas indexadas.
+A raiz ainda concentra muitos arquivos porque o projeto evoluiu incrementalmente. A próxima consolidação segura é revisar scripts de paginação de desktop e verificar se `desktop-page-density.js` e `desktop-total-book-pages.js` podem ser absorvidos pelo núcleo sem alterar a paginação pública. Uma reorganização física em pastas como `assets/`, `css/`, `js/` e `content/` é possível, mas deve ser feita em uma única alteração coordenada, atualizando todos os caminhos no mesmo commit e preservando as URLs públicas das páginas indexadas.
